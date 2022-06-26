@@ -10,11 +10,16 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <Container maxW={"none"} as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
+    <Container
+      maxW={"none"}
+      as="footer"
+      role="contentinfo"
+      py={{ base: "12", md: "16" }}
+    >
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row" align="center">
           <Text fontSize="sm" color="subtle">
-            Jonatan Schultz
+            &copy; {new Date().getFullYear()} Jonatan Schultz
           </Text>
           <ButtonGroup variant="ghost">
             <IconButton
@@ -37,10 +42,6 @@ function Footer() {
             />
           </ButtonGroup>
         </Stack>
-        <Text fontSize="sm" color="subtle">
-          &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights
-          reserved.
-        </Text>
       </Stack>
     </Container>
   );
