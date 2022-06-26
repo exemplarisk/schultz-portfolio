@@ -21,7 +21,7 @@ export const Header = () => {
         bg="bg-surface"
         boxShadow={useColorModeValue("sm", "sm-dark")}
       >
-        <Container py={{ base: "4", lg: "5" }}>
+        <Container maxW={"none"} py={{ base: "4", lg: "5" }}>
           <HStack spacing="10" justify="space-between">
             {isDesktop ? (
               <Flex justify="space-between" flex="1">
@@ -42,6 +42,7 @@ export const Header = () => {
                 variant="ghost"
                 icon={<FiMenu fontSize="1.25rem" />}
                 aria-label="Open Menu"
+                onClick={() => console.log("clicked")}
               />
             )}
           </HStack>

@@ -10,11 +10,11 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <Container as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
+    <Container maxW={"none"} as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row" align="center">
           <Text fontSize="sm" color="subtle">
-            Schultz IT.
+            Jonatan Schultz
           </Text>
           <ButtonGroup variant="ghost">
             <IconButton
