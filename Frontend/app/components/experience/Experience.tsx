@@ -1,5 +1,6 @@
 import React from 'react'
-import './experience.css'
+import styles from "./experience.module.css";
+
 
 const Experience = () => {
   return (
