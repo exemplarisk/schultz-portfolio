@@ -10,6 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import * as React from "react";
+import NextLink from "next/link";
 import { FiMenu } from "react-icons/fi";
 
 export const Header = () => {
@@ -33,7 +34,11 @@ export const Header = () => {
                   )}
                 </ButtonGroup>
                 <HStack spacing="3">
-                  <Button variant="ghost">Curriculum Vitae</Button>
+                  <NextLink href="/cv">
+                    <Button variant="ghost">
+                      Curriculum Vitae
+                    </Button>
+                  </NextLink>
                 </HStack>
               </Flex>
             ) : (
