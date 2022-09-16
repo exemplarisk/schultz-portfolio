@@ -33,11 +33,11 @@ html {
 
 body {
     font-family: "Poppins", "Sans-serif";
-    background: var(--color-bg);
+    background-color: rgb(3, 45, 35);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../public/bground.jpg)
-}
+/*     background-image: url(../public/bground.jpg)
+ */}
 
 /* ============== COMMONS BELOW ================== */
 .container {
@@ -82,6 +82,7 @@ a:hover {
 }
 
 .btn {
+    background: #1e3c51;
     width: max-content;
     display: inline-block;
     color: var(--color-primary);
@@ -98,7 +99,7 @@ a:hover {
 }
 
 .btn-primary {
-    background: var(--color-primary);
+    background: #0c6bae;
     color:(var(--color-bg));
 }
 
