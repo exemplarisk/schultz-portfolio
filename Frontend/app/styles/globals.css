@@ -157,10 +157,27 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+.scroll__down {
+    position: absolute;
+    right: -2rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem
+}
+
+
+
+
 /*================MEDIUM DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+
     .container {
         width: var(--container-width-md);
+        background: red;
     }
 
     section {
@@ -170,6 +187,12 @@ header {
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+    .header__socials, .scroll__down {
+        display: none;
+    }
     .container {
         width: var(--container-width-sm)
     }
