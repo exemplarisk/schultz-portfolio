@@ -55,6 +55,7 @@ h1 {
 
 section {
     margin-top: 8rem;
+    height: 100vh;
 }
 
 section > h2, section > h5 {
@@ -145,6 +146,8 @@ header {
     background: var(--color-primary);
 }
 
+/*------------------------------ME-------------------------------*/
+
 .me {
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
@@ -157,6 +160,8 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+/*------------SCROLL--------------*/
+
 .scroll__down {
     position: absolute;
     right: -2rem;
@@ -165,6 +170,14 @@ header {
     font-weight: 300;
     font-size: 0.9rem
 }
+
+/*-----------------------NAV--------------------------*/
+
+
+
+
+
+
 
 
 
