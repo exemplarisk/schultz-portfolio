@@ -278,6 +278,69 @@ nav a.active {
 }
 
 
+/*-------------------------EXPERIENCE----------------------------------*/
+.experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.essential__experience {
+/*     display: grid;
+    grid-template-columns: 2fr 0fr;
+    gap: 2rem;
+ */}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.experience__details {
+    display: flex;
+    gap: 1rem;
+}
+
+.experience__details-icon {
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+.experience__dev {
+    background: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+}
+
+.experience__dev:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.experience__frontend {
+
+}
+
+.experience__backend {
+
+}
+
+.experience__essential {
+    background-image: url(../public/bground.jpg);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+}
+
 /*================MEDIUM DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 1024px) {
     header {
