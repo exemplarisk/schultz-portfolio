@@ -456,6 +456,7 @@ nav a.active {
 
 .container.story__container {
     width: 40%;
+    padding-bottom: 4rem;
 }
 
 .avatar {
