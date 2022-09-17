@@ -15,81 +15,66 @@ const Services = () => {
           <ul className="service__list">
             <li>
               <BiCheck className="service__list_icon" />
-              <p>Web development using modern frameworks</p>
+              <p>Responsive Web development</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Mobile Applications</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>E-Commerce Development</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Content Management System Setup</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Databases and APIs</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>Release and deploy</p>
+              <p>Cloud Computing</p>
+            </li>
+            <li>
+              <BiCheck className="service__list_icon" />
+              <p>Release and deployment</p>
             </li>
           </ul>
         </article>
         <article className="service">
           <div className="service__head">
-            <h3>Agile transformation and Quality Assurance</h3>
+            <h3>Organisational Transformation</h3>
           </div>
           <ul className="service__list">
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Agile Transformation</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Scrum/Kanban Transition</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Communications Strategy</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Culture evolution strategies</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Team Building</p>
+            </li>
+            <li>
+              <BiCheck className="service__list_icon" />
+              <p>Vision Setting</p>
+            </li>
+            <li>
+              <BiCheck className="service__list_icon" />
+              <p>Security First</p>
             </li>
           </ul>
         </article>
@@ -100,38 +85,31 @@ const Services = () => {
           <ul className="service__list">
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Agile Project Management</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Resource Management</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Estimating</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Planning and Scheduling</p>
             </li>
             <li>
               <BiCheck className="service__list_icon" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat, esse?
-              </p>
+              <p>Document Control</p>
+            </li>
+            <li>
+              <BiCheck className="service__list_icon" />
+              <p>JIRA/DEVOPS</p>
+            </li>
+            <li>
+              <BiCheck className="service__list_icon" />
+              <p>Quality Assurance</p>
             </li>
           </ul>
         </article>
