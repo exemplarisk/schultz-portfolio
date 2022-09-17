@@ -11,7 +11,7 @@ const Portfolio = () => {
           <div className="portfolio__item-image">
             <iframe
               width="100%"
-              height="800px"
+              height="400px"
               src="https://casa-larios.vercel.app"
               title="casalarios"
             ></iframe>

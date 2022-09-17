@@ -345,7 +345,7 @@ nav a.active {
 }
 
 .experience__essential {
-    background:rgba(77, 181, 255, 0.4);
+    background: rgba(77, 181, 255, 0.4);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
@@ -431,7 +431,6 @@ nav a.active {
 
 .portfolio__item:hover {
     border-color: var(--color-primary-variant);
-    background: transparent;
     cursor: default;
     -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
@@ -514,8 +513,11 @@ nav a.active {
 }
 
 .contact__option:hover {
-    background: transparent;
     border-color: var(--color-primary-variant);
+    cursor: default;
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
 .contact__option-icon {
