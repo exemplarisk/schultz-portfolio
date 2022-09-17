@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import { BsLinkedin } from "react-icons/bs";
+import emailjs from 'emailjs-com'
 
 
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_izlg2bj",
+      "template_z33zd8m",
+      form.current,
+      "lSmoQpjwwaAGjB7Fi"
+    );
+
+    e.target.reset();
+  };
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -32,13 +48,13 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>jonatan_schultz@hotmail.com</h5>
+            <h5>Jonatan Schultz</h5>
             <a href="mailto:jonatan_schultz@hotmail.com" target="blank">
               Send a message
             </a>
           </article>
         </div>
-        <form action="">
+        <form id="form" ref={form} onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
