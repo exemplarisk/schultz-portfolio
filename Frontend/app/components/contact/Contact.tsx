@@ -1,23 +1,32 @@
-import React, { useRef } from 'react'
-import {MdOutlineEmail} from 'react-icons/md'
-import {RiMessengerLine} from 'react-icons/ri'
+import React from "react";
+import { MdOutlineEmail } from "react-icons/md";
+import { RiMessengerLine } from "react-icons/ri";
 import { BsLinkedin } from "react-icons/bs";
-import emailjs from 'emailjs-com'
-
-
+import emailjs from "emailjs-com";
+import swal from "sweetalert";
 
 const Contact = () => {
-  const form = useRef();
+  const triggerSwal = () => {
+    return swal({
+      text: "Email Sent!",
+      icon: "success",
+      closeOnClickOutside: true,
+    });
+  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_izlg2bj",
-      "template_z33zd8m",
-      form.current,
-      "lSmoQpjwwaAGjB7Fi"
-    );
+    emailjs
+      .sendForm(
+        "service_izlg2bj",
+        "template_z33zd8m",
+        e.target,
+        "lSmoQpjwwaAGjB7Fi"
+      )
+      .then(() => {
+        triggerSwal()
+      });
 
     e.target.reset();
   };
@@ -54,7 +63,7 @@ const Contact = () => {
             </a>
           </article>
         </div>
-        <form id="form" ref={form} onSubmit={sendEmail}>
+        <form id="form" onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
@@ -75,6 +84,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;
