@@ -44,7 +44,11 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 500;
 }
 
@@ -56,12 +60,13 @@ section {
     margin-top: 8rem;
 }
 
-section > h2, section > h5 {
+section>h2,
+section>h5 {
     text-align: center;
     color: var(--color-light);
 }
 
-section > h2 {
+section>h2 {
     color: var(--color-primary);
     margin-bottom: 3rem;
 }
@@ -70,7 +75,7 @@ section > h2 {
     color: var(--color-light);
 }
 
-a{
+a {
     color: var(--color-primary);
     transition: var(--transition);
 }
@@ -98,7 +103,7 @@ a:hover {
 
 .btn-primary {
     background: #0c6bae;
-    color:(var(--color-bg));
+    color: (var(--color-bg));
 }
 
 img {
@@ -202,7 +207,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background: var(--color-bg);
+    background: #959595;
     color: var(--color-white);
 }
 
@@ -284,21 +289,21 @@ nav a.active {
     gap: 2rem;
 }
 
-.experience__container > div h3 {
+.experience__container>div h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-primary);
 }
 
-.essential__experience > div h3 {
+.essential__experience>div h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-white);
- }
+}
 
- .essential__experience {
+.essential__experience {
     margin-top: 3vh;
- }
+}
 
 .experience__content {
     display: grid;
@@ -359,7 +364,7 @@ nav a.active {
 .service {
     background: var(--color-bg-variant);
     border-radius: 2rem;
-    border: 1px solid var(--color-primary);
+    border: 1px solid #121112;
     height: auto;
     transition: var(--transition);
 }
@@ -375,9 +380,9 @@ nav a.active {
 }
 
 .service__head {
-    background: var(--color-primary);
+    background: #f5f5f5;
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -535,7 +540,8 @@ form {
     gap: 1.2rem;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -547,7 +553,7 @@ input, textarea {
 
 /*-------------------------FOOTER-----------------------------*/
 footer {
-    background:var(--color-primary);
+    background: #959595;
     padding: 3rem 0;
     text-align: center;
     font-size: 0.9rem;
@@ -585,13 +591,12 @@ footer a {
     color: var(--color-white);
     padding: 0.8rem;
     border-radius: 0.7rem;
-    display: flex;
-    border: 1px solid transparent;
+    border: 1px solid gray;
 }
 
 .footer__socials a:hover {
-    background: transparent;
-    color: var(--color-bg);
+    background: #1e3c51;
+    color: white;
     border-color: var(--color-bg);
 }
 
@@ -633,7 +638,7 @@ footer a {
         grid-template-columns: 1fr;
     }
 
-    .experience__container > div {
+    .experience__container>div {
         width: 80%;
         padding: 2rem;
         margin: 0 auto;
@@ -668,6 +673,11 @@ footer a {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
@@ -675,13 +685,17 @@ footer a {
     header {
         height: 100vh;
     }
-    .header__socials, .scroll__down {
+
+    .header__socials,
+    .scroll__down {
         display: none;
     }
+
     .container {
         width: var(--container-width-sm)
     }
-    section  > h2{
+
+    section>h2 {
         margin-bottom: 2rem;
     }
 
@@ -702,11 +716,12 @@ footer a {
     .about__content p {
         margin: 1.5rem 0;
     }
+
     .experience__container {
         gap: 1rem;
     }
 
-    .experience__container > div {
+    .experience__container>div {
         width: 100%;
         padding: 2rem 1rem;
     }
@@ -736,5 +751,9 @@ footer a {
 
     .container.contact__container {
         width: var(--container-width-sm);
+    }
+
+    .footer__socials {
+        margin-bottom: 2.6rem;
     }
 }
