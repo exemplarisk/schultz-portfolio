@@ -251,9 +251,10 @@ nav a.active {
 }
 
 .about__card:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
     cursor: default;
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
 .about__icon {
@@ -330,9 +331,13 @@ nav a.active {
 }
 
 .experience__dev:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
     cursor: default;
+    transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
 .experience__essential {
@@ -356,14 +361,18 @@ nav a.active {
     background: var(--color-bg-variant);
     border-radius: 2rem;
     border: 1px solid var(--color-primary);
-    height: fit-content;
+    height: auto;
     transition: var(--transition);
 }
 
 .service:hover {
-    background: transparent;
-    border-color:var(--color-primary-variant);
     cursor: default;
+    transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
 .service__head {
