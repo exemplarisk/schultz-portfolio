@@ -345,7 +345,7 @@ nav a.active {
 }
 
 .experience__essential {
-    background-image: url(../public/bground.jpg);
+    background:rgba(77, 181, 255, 0.4);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
