@@ -7,6 +7,7 @@ import Contact from '../components/contact/Contact';
 import Experience from '../components/experience/Experience';
 import Portfolio from '../components/portfolio/Portfolio';
 import Services from '../components/services/Services';
+import Story from '../components/story/Story';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Experience />
       <Services />
       <Portfolio />
+      <Story />
       <Contact />
       <Footer />
     </>
