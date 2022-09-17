@@ -1,8 +1,6 @@
 import React from 'react'
 import { BsLinkedin } from 'react-icons/bs'
 import { FaGithub } from "react-icons/fa";
-import { FiDribbble } from "react-icons/fi"
-
 
 const HeaderSocials = () => {
   return (
@@ -12,9 +10,6 @@ const HeaderSocials = () => {
       </a>
       <a href="https://github.com/exemplarisk" target="blank">
         <FaGithub />
-      </a>
-      <a href="https://dribbble.com" target="blank">
-        <FiDribbble />
       </a>
     </div>
   );
