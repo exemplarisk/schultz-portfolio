@@ -423,6 +423,7 @@ nav a.active {
 }
 
 .portfolio__item {
+    padding: 1rem;
     background: var(--color-bg-variant);
     border-radius: 2rem;
     border: 3px solid gray;
@@ -667,6 +668,10 @@ footer a {
         gap: 1.2rem;
     }
 
+    .portfolio__item-cta > div {
+        font-size: x-small;
+    }
+
     .container.story__container {
         width: 60%;
     }
@@ -741,6 +746,10 @@ footer a {
     .portfolio__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio__item-cta > a {
+        font-size: x-small;
     }
 
     .container.story__container {

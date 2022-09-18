@@ -10,6 +10,7 @@ const Portfolio = () => {
         <article className="portfolio__item">
           <div className="portfolio__item-image">
             <iframe
+              style={{borderRadius: "25px"}}
               width="100%"
               height="400px"
               src="https://casa-larios.vercel.app"
