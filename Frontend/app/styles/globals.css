@@ -590,17 +590,18 @@ footer a {
 }
 
 .footer__socials a {
-    background: var(--color-bg);
     color: var(--color-white);
     padding: 0.8rem;
-    border-radius: 0.7rem;
-    border: 1px solid gray;
+    font-size: 2em;
+}
+
+.footer__socials a > svg {
+    border-radius: 0.2rem;
 }
 
 .footer__socials a:hover {
-    background: #1e3c51;
-    color: white;
-    border-color: var(--color-bg);
+    color: var(--color-bg);
+    border-radius: 2em;
 }
 
 .footer__copyright {
