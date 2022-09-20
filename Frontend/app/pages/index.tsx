@@ -8,12 +8,16 @@ import Experience from '../components/experience/Experience';
 import Portfolio from '../components/portfolio/Portfolio';
 import Services from '../components/services/Services';
 import Story from '../components/story/Story';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <link rel="js icon" href="/jslogo.png" />
+      </Head>
       <Header />
-      <Nav/>
+      <Nav />
       <About />
       <Experience />
       <Services />
