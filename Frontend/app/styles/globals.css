@@ -124,6 +124,22 @@ header {
     position: relative;
 }
 
+.party {
+    line-height: 70%;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    border-radius: 50px;
+    border: none;
+    background: var(--color-bg-variant);
+    color: #fff;
+    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #ababab;
+}
+
+.party:active {
+    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #000;
+}
+
 /*=======================CTA========================*/
 .cta {
     margin-top: 2.5rem;
@@ -595,7 +611,7 @@ footer a {
     font-size: 2em;
 }
 
-.footer__socials a > svg {
+.footer__socials a>svg {
     border-radius: 0.2rem;
 }
 
@@ -612,10 +628,6 @@ footer a {
 
 /*================MEDIUM DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 1024px) {
-    header {
-        height: 68vh;
-    }
-
     .container {
         width: var(--container-width-md);
     }
@@ -669,7 +681,7 @@ footer a {
         gap: 1.2rem;
     }
 
-    .portfolio__item-cta > div {
+    .portfolio__item-cta>div {
         font-size: x-small;
     }
 
@@ -749,7 +761,7 @@ footer a {
         gap: 1rem;
     }
 
-    .portfolio__item-cta > a {
+    .portfolio__item-cta>a {
         font-size: x-small;
     }
 
