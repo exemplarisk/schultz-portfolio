@@ -16,10 +16,8 @@ const Header = () => {
           <HeaderSocials />
           <div className="me">
             <iframe
-              style={{borderRadius: "25px"}}
+              className="frame__player"
               src="https://open.spotify.com/embed/track/5cpCqye5HUbsy7kNZcOhbD?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
               frameBorder="0"
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

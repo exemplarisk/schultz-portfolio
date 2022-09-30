@@ -124,20 +124,10 @@ header {
     position: relative;
 }
 
-.party {
-    line-height: 70%;
-    width: 200px;
-    height: 200px;
-    font-size: 30px;
-    border-radius: 50px;
-    border: none;
-    background: var(--color-bg-variant);
-    color: #fff;
-    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #ababab;
-}
-
-.party:active {
-    box-shadow: 4px 4px 5px #fff, -4px -4px 5px #fff, inset 4px 4px 5px #000;
+.frame__player {
+    height: 440px;
+    width: 90%;
+    border-radius: 25px;
 }
 
 /*=======================CTA========================*/
@@ -169,7 +159,8 @@ header {
 /*------------------------------ME-------------------------------*/
 
 .me {
-    background: linear-gradient(var(--color-primary), transparent);
+    background: #b2b2b2;
+    opacity: 0.6;
     width: 22rem;
     height: 30rem;
     position: absolute;
@@ -181,6 +172,7 @@ header {
 }
 
 .me:hover {
+    opacity: 1;
     cursor: default;
     -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
@@ -709,9 +701,15 @@ footer a {
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
+
     .header__socials,
     .scroll__down {
         display: none;
+    }
+
+    .frame__player {
+        width: 90%;
+        border-radius: 25px;
     }
 
     .container {
@@ -782,5 +780,10 @@ footer a {
 
     .footer__socials {
         margin-bottom: 2.6rem;
+    }
+
+    .header {
+        overflow: visible;
+        margin-bottom: 50vh;
     }
 }
