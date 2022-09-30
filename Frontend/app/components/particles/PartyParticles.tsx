@@ -65,7 +65,7 @@ const PartyParticles = () => {
             direction: "none",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "destroy",
             },
             random: false,
             speed: 3,

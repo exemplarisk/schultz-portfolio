@@ -180,6 +180,13 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+.me:hover {
+    cursor: default;
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
 /*------------SCROLL--------------*/
 
 .scroll__down {
@@ -702,10 +709,6 @@ footer a {
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
-    header {
-        height: 100vh;
-    }
-
     .header__socials,
     .scroll__down {
         display: none;
