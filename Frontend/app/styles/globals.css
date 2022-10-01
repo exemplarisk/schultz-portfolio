@@ -113,7 +113,7 @@ img {
 }
 
 header {
-    height: 100vh;
+    height: 110vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -165,7 +165,7 @@ header {
     position: absolute;
     left: calc(50% - 11rem);
     margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
+    border-radius: 12rem 12rem 2rem 2rem;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
@@ -706,13 +706,6 @@ footer a {
         display: none;
     }
 
-    .frame__player {
-        width: 100%;
-        height: 154px;
-        border-radius: 1.5rem;
-        border: 1px groove var(--color-white);
-    }
-
     .container {
         width: var(--container-width-sm)
     }
@@ -783,12 +776,9 @@ footer a {
         margin-bottom: 2.6rem;
     }
 
-    .me {
-        opacity: 1;
-        background: none;
-    }
-
-    .me:hover {
-        box-shadow: none;
+    .frame__player {
+        width: 100%;
+        height: 234px;
+        border-radius: 1.5rem;
     }
 }
