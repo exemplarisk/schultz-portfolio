@@ -781,4 +781,12 @@ footer a {
         height: 234px;
         border-radius: 1.5rem;
     }
+
+    .me {
+        height: 21rem;
+    }
+
+    .header {
+        height: 80vh;
+    }
 }
