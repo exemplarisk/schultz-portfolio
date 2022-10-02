@@ -131,11 +131,20 @@ header {
 
 .coffee__button {
     padding: 2em;
-    opacity: 0.7;
     width: 20em;
 }
 
-.coffee__button:hover {
+.coffee__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.coffee__image {
+    opacity: 0.8;
+}
+
+.coffee__image:hover {
     opacity: 1;
 }
 

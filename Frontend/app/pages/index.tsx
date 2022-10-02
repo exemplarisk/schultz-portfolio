@@ -9,6 +9,7 @@ import Portfolio from '../components/portfolio/Portfolio';
 import Services from '../components/services/Services';
 import Story from '../components/story/Story';
 import Head from 'next/head';
+import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Header />
       <Nav />
       <About />
+      <BuyMeACoffeeWidget />
       <Experience />
       <Services />
       <Portfolio />

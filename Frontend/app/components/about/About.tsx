@@ -43,18 +43,8 @@ const About = () => {
               <small>10+</small>
             </article>
           </div>
-          <div className="coffee__button">
-            <BuyMeACoffeeWidget />
-          </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-            adipisci sit corporis voluptatem dolor harum nihil odit ratione non
-            accusantium distinctio, architecto praesentium officiis facilis!
-            Veniam inventore fugiat voluptatem voluptatibus dolore dolorem
-            asperiores quis maxime voluptates quidem tenetur minima odio aliquam
-            officiis quod, aliquid velit sint reprehenderit maiores nemo eos.
-          </p>
-
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit omnis, accusamus, sapiente nam culpa et fuga quas eos nemo odio suscipit id eius ipsa ipsum cum mollitia. Maiores sit nostrum aut reiciendis, repellendus, inventore, eum eaque in sapiente fuga voluptate quam sequi dolorum pariatur. Assumenda nemo et beatae inventore reiciendis.          </p>
           <a href="#contact" className="btn btn-primary">
             Let´s Talk
           </a>
