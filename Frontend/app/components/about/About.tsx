@@ -39,12 +39,11 @@ const About = () => {
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            omnis, accusamus, sapiente nam culpa et fuga quas eos nemo odio
-            suscipit id eius ipsa ipsum cum mollitia. Maiores sit nostrum aut
-            reiciendis, repellendus, inventore, eum eaque in sapiente fuga
-            voluptate quam sequi dolorum pariatur. Assumenda nemo et beatae
-            inventore reiciendis.
+            I am a System developer with continuous desire to learn. I have
+            been developing web applications for four years, and for two years
+            professionally. I am specialized in frontend development using
+            TypeScript, React, NextJS, MaterialUI, ChakraUI, TailwindCSS, Styled
+            Components and more highend tools and frameworks!
           </p>
           <a href="#contact" className="btn btn-primary">
             Let´s Talk

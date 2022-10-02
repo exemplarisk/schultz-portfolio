@@ -12,8 +12,8 @@ import "swiper/css/pagination";
 const Story = () => {
   return (
     <section id="story">
-      <h5>About</h5>
-      <h2>me</h2>
+      <h5>More facts</h5>
+      <h2>about me</h2>
 
       <Swiper
         className="container story__container"
