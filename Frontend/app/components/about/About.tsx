@@ -1,17 +1,14 @@
-import next from 'next'
-import React from 'react'
-import { FaAward } from 'react-icons/fa'
+import React from "react";
+import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
-import {VscFolderLibrary} from 'react-icons/vsc'
-import Image from 'next/image'
-import BuyMeACoffeeWidget from '../buymeacoffee/BuyMeACoffeeWidget';
+import { VscFolderLibrary } from "react-icons/vsc";
+import Image from "next/image";
 
 const About = () => {
   return (
     <section id="about">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
-
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
@@ -23,7 +20,6 @@ const About = () => {
             ></Image>
           </div>
         </div>
-
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
@@ -33,7 +29,6 @@ const About = () => {
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
-
               <h5>Experience</h5>
               <small>2+ years working experience</small>
             </article>
@@ -44,7 +39,13 @@ const About = () => {
             </article>
           </div>
           <p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit omnis, accusamus, sapiente nam culpa et fuga quas eos nemo odio suscipit id eius ipsa ipsum cum mollitia. Maiores sit nostrum aut reiciendis, repellendus, inventore, eum eaque in sapiente fuga voluptate quam sequi dolorum pariatur. Assumenda nemo et beatae inventore reiciendis.          </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            omnis, accusamus, sapiente nam culpa et fuga quas eos nemo odio
+            suscipit id eius ipsa ipsum cum mollitia. Maiores sit nostrum aut
+            reiciendis, repellendus, inventore, eum eaque in sapiente fuga
+            voluptate quam sequi dolorum pariatur. Assumenda nemo et beatae
+            inventore reiciendis.
+          </p>
           <a href="#contact" className="btn btn-primary">
             Let´s Talk
           </a>
@@ -52,6 +53,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit omnis, accusamu
       </div>
     </section>
   );
-}
+};
 
-export default About
+export default About;

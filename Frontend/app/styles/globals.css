@@ -113,7 +113,7 @@ img {
 }
 
 header {
-    height: 110vh;
+    height: 80vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -132,6 +132,7 @@ header {
 .coffee__button {
     padding: 2em;
     width: 20em;
+    cursor: initial;
 }
 
 .coffee__container {
@@ -146,6 +147,7 @@ header {
 
 .coffee__image:hover {
     opacity: 1;
+    cursor: pointer;
 }
 
 /*=======================CTA========================*/
@@ -806,7 +808,7 @@ footer a {
         height: 21rem;
     }
 
-    .header {
-        height: 80vh;
+    header {
+        height: 110vh;
     }
 }
