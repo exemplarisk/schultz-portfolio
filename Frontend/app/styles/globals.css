@@ -113,7 +113,7 @@ img {
 }
 
 header {
-    height: 80vh;
+    height: 110vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -806,9 +806,5 @@ footer a {
 
     .me {
         height: 21rem;
-    }
-
-    header {
-        height: 110vh;
     }
 }
