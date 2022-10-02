@@ -4,6 +4,7 @@ import { FaAward } from 'react-icons/fa'
 import { BiCode } from "react-icons/bi";
 import {VscFolderLibrary} from 'react-icons/vsc'
 import Image from 'next/image'
+import BuyMeACoffeeWidget from '../buymeacoffee/BuyMeACoffeeWidget';
 
 const About = () => {
   return (
@@ -42,10 +43,21 @@ const About = () => {
               <small>10+</small>
             </article>
           </div>
+          <div className="coffee__button">
+            <BuyMeACoffeeWidget />
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+            adipisci sit corporis voluptatem dolor harum nihil odit ratione non
+            accusantium distinctio, architecto praesentium officiis facilis!
+            Veniam inventore fugiat voluptatem voluptatibus dolore dolorem
+            asperiores quis maxime voluptates quidem tenetur minima odio aliquam
+            officiis quod, aliquid velit sint reprehenderit maiores nemo eos.
+          </p>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere adipisci sit corporis voluptatem dolor harum nihil odit ratione non accusantium distinctio, architecto praesentium officiis facilis! Veniam inventore fugiat voluptatem voluptatibus dolore dolorem asperiores quis maxime voluptates quidem tenetur minima odio aliquam officiis quod, aliquid velit sint reprehenderit maiores nemo eos.</p>
-
-          <a href="#contact" className="btn btn-primary">Let´s Talk</a>
+          <a href="#contact" className="btn btn-primary">
+            Let´s Talk
+          </a>
         </div>
       </div>
     </section>

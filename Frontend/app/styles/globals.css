@@ -129,6 +129,16 @@ header {
     width: 90%;
 }
 
+.coffee__button {
+    padding: 2em;
+    opacity: 0.7;
+    width: 20em;
+}
+
+.coffee__button:hover {
+    opacity: 1;
+}
+
 /*=======================CTA========================*/
 .cta {
     margin-top: 2.5rem;
@@ -696,6 +706,7 @@ footer a {
         flex-direction: column;
         gap: 1.5rem;
     }
+
 }
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
