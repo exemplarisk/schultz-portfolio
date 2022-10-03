@@ -36,7 +36,7 @@ const Portfolio = () => {
               CASA LARIOS
             </a>
             <div>
-              <a>React, NextJs, TypeScript, MaterialUI, TailwindCSS</a>
+              <p>React, NextJs, TypeScript, MaterialUI, TailwindCSS</p>
             </div>
           </div>
         </article>
