@@ -10,12 +10,16 @@ import Services from '../components/services/Services';
 import Story from '../components/story/Story';
 import Head from 'next/head';
 import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
+import PartyParticles from '../components/particles/PartyParticles';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <link rel="js icon" href="/jslogo.png" />
+        <title>Jonatan Schultz</title>
+        <meta name="description" content="Author: Jonatan Schultz">
+        </meta>
       </Head>
       <Header />
       <Nav />
@@ -27,6 +31,7 @@ const Home: NextPage = () => {
       <Story />
       <Contact />
       <Footer />
+      <PartyParticles />
     </>
   );
 }

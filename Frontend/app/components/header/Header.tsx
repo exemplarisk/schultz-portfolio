@@ -1,13 +1,11 @@
 import React from 'react'
 import CTA from './CTA'
 import HeaderSocials from './HeaderSocials';
-import PartyParticles from '../particles/PartyParticles';
 
 const Header = () => {
   return (
     <>
-      <PartyParticles />
-      <header>
+     <header>
         <div className="container headercontainer">
           <h5>Hello I'm</h5>
           <h1>Jonatan Schultz</h1>
@@ -22,6 +20,7 @@ const Header = () => {
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
+              title="player"
             ></iframe>
           </div>
           <a href="#contact" className="scroll__down">
