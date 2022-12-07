@@ -179,24 +179,15 @@ header {
 /*------------------------------ME-------------------------------*/
 
 .me {
-    background: #b2b2b2;
-    opacity: 0.6;
+    background: linear-gradient(#363ba2, transparent);
     width: 22rem;
     height: 30rem;
     position: absolute;
     left: calc(50% - 11rem);
     margin-top: 4rem;
-    border-radius: 12rem 12rem 2rem 2rem;
+    border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
-}
-
-.me:hover {
-    opacity: 1;
-    cursor: default;
-    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
 /*------------SCROLL--------------*/

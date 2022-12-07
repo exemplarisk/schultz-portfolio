@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import CTA from './CTA'
 import HeaderSocials from './HeaderSocials';
@@ -5,23 +6,24 @@ import HeaderSocials from './HeaderSocials';
 const Header = () => {
   return (
     <>
-     <header>
+      <header>
         <div className="container headercontainer">
           <h5>Hello I'm</h5>
           <h1>Jonatan Schultz</h1>
-          <h5 className="text-light">Fullstack developer</h5>
+          <h5 className="text-light">
+            Ideas Engineer & Miscellaneous Specialist
+          </h5>
           <CTA />
           <HeaderSocials />
           <div className="me">
-            <iframe
-              className="frame__player"
-              src="https://open.spotify.com/embed/track/5cpCqye5HUbsy7kNZcOhbD?utm_source=generator&theme=0"
-              frameBorder="0"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              title="player"
-            ></iframe>
+            <Image
+              alt="me"
+              layout="responsive"
+              width="513"
+              height="640"
+              style={{ borderRadius: "30%" }}
+              src="/mepio.jpg"
+            />
           </div>
           <a href="#contact" className="scroll__down">
             Scroll Down
