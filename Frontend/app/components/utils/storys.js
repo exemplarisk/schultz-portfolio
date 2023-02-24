@@ -8,7 +8,7 @@ export const storys = [
   {
     id: 2,
     title: "I enjoy more than just coding!",
-    text: "In addition to my love for technology and design, I am also interested in the history of humanity, our planet, and the universe! I like everyone else, also love the sound of good music. Do you want to find out what kind of music I like? Check the top of the page!",
+    text: "In addition to my love for technology and design, I am also interested in the history of humanity, our planet, and the universe!",
     href: "/mep2.jpg",
   },
   {
