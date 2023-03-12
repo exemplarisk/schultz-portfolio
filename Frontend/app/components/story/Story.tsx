@@ -1,5 +1,5 @@
 import React from "react";
-import { storys } from "../utils/storys";
+import { storys } from "./data/storys";
 import Image from "next/image";
 // import Swiper core and required modules
 import { Pagination } from "swiper";

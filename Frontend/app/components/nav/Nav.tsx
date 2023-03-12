@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { links } from '../utils/navlinks'
+import { links } from './data/navlinks'
 
 
 const Nav = () => {
