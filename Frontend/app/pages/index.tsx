@@ -11,6 +11,7 @@ import Story from '../components/story/Story';
 import Head from 'next/head';
 import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
 import PartyParticles from '../components/particles/PartyParticles';
+import DarkModeButton from '../components/darkmode/DarkModeButton';
 
 const Home: NextPage = () => {
   return (
@@ -18,12 +19,16 @@ const Home: NextPage = () => {
       <Head>
         <link rel="js icon" href="/jslogo.png" />
         <title>Jonatan Schultz</title>
-        <meta name="description" content="Author: Jonatan Schultz"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="author" content="Jonatan Schultz"/>
-        <meta name="keywords" content="author, development, portfolio, project"/>
-        <meta name="language" content="en"/>
+        <meta name="description" content="Author: Jonatan Schultz" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Jonatan Schultz" />
+        <meta
+          name="keywords"
+          content="author, development, portfolio, project"
+        />
+        <meta name="language" content="en" />
       </Head>
+      <DarkModeButton />
       <Header />
       <Nav />
       <About />
