@@ -362,9 +362,6 @@ nav a.active {
 
 .experience__dev:hover {
     cursor: default;
-    transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
     -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
@@ -397,9 +394,6 @@ nav a.active {
 
 .service:hover {
     cursor: default;
-    transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
     -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
