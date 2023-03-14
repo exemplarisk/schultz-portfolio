@@ -8,7 +8,7 @@ const Experience = () => {
       <h5>My Skills</h5>
       <h2>My Experience</h2>
       <div className="container experience__container">
-        <div className="experience__dev experience__frontend">
+        <div className="experience__dev">
           <h3>Frontend Development</h3>
           <div className="experience__content">
             {experience.frontend.map((skill, index) => (
@@ -22,7 +22,7 @@ const Experience = () => {
             ))}
           </div>
         </div>
-        <div className="experience__dev experience__backend">
+        <div className="experience__dev">
           <h3>Backend Development</h3>
           <div className="experience__content">
             {experience.backend.map((skill, index) => (
@@ -38,9 +38,9 @@ const Experience = () => {
         </div>
       </div>
       <div className="container essential__experience">
-        <div className="experience__essential">
+        <div className="experience__dev">
           <h3>Essential Skills</h3>
-          <div className="essential__experience__content">
+          <div className="experience__content">
             {experience.essential.map((skill, index) => (
               <article className="experience__details" key={index}>
                 <BsPatchCheckFill className="experience__details-icon" />

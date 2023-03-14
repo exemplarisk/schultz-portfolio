@@ -367,14 +367,6 @@ nav a.active {
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
 }
 
-.experience__essential {
-    background: rgba(77, 181, 255, 0.4);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-}
-
-
 /*-----------------------------Services----------------------------------*/
 
 .services__container {
@@ -668,10 +660,6 @@ footer a {
         padding: 1rem;
     }
 
-    .essential__experience__content {
-        padding: 1rem;
-    }
-
     .services__container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
@@ -744,11 +732,6 @@ footer a {
     }
 
     .experience__container>div {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
-
-    .experience__essential {
         width: 100%;
         padding: 2rem 1rem;
     }
