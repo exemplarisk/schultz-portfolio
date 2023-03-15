@@ -377,13 +377,13 @@ nav a.active {
 .experience__container>div h3 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .essential__experience>div h3 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-white);
+        margin-bottom: 2rem;
+        color: var(--color-white);
 }
 
 .essential__experience {
@@ -709,6 +709,12 @@ footer a {
         grid-template-columns: 1fr;
     }
 
+    .essential__experience>div {
+                width: 80%;
+                    padding: 2rem;
+                    margin: 0 auto;
+    }
+
     .experience__container>div {
         width: 80%;
         padding: 2rem;
@@ -793,6 +799,10 @@ footer a {
     .experience__container>div {
         width: 100%;
         padding: 2rem 1rem;
+    }
+
+    .essential__experience>div {
+        width: 100%;
     }
 
     .experience__dev {
