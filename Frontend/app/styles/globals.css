@@ -795,6 +795,10 @@ footer a {
         padding: 2rem 1rem;
     }
 
+    .experience__dev {
+        padding: 2.4rem;
+    }
+
     .services__container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
