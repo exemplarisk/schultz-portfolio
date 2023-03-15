@@ -718,9 +718,9 @@ footer a {
         margin: 0 auto;
     }
 
-    .experience__container>div {
+    .experience__dev {
         width: 80%;
-        padding: 2rem;
+        padding: 2rem 1rem;
         margin: 0 auto;
     }
 
@@ -809,7 +809,9 @@ footer a {
     }
 
     .essential__experience>div {
+        margin-top: 2vh;
         width: 100%;
+        padding: 2rem 1rem;
     }
 
     .experience__dev {
