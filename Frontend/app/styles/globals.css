@@ -382,8 +382,8 @@ nav a.active {
 
 .essential__experience>div h3 {
     text-align: center;
-        margin-bottom: 2rem;
-        color: var(--color-white);
+    margin-bottom: 2rem;
+    color: var(--color-white);
 }
 
 .essential__experience {
@@ -404,12 +404,15 @@ nav a.active {
 
 .experience__details {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 .experience__details-icon {
-    margin-top: 6px;
     color: var(--color-primary);
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
 }
 
 .experience__dev {
@@ -710,9 +713,9 @@ footer a {
     }
 
     .essential__experience>div {
-                width: 80%;
-                    padding: 2rem;
-                    margin: 0 auto;
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
     }
 
     .experience__container>div {
@@ -801,6 +804,10 @@ footer a {
         padding: 2rem 1rem;
     }
 
+    .essential__experience {
+        margin-top: 2vh;
+    }
+
     .essential__experience>div {
         width: 100%;
     }
@@ -848,4 +855,5 @@ footer a {
     .me {
         height: 21rem;
     }
+
 }
