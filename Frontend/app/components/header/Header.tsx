@@ -16,20 +16,12 @@ const Header = () => {
           </h5>
           <CTA />
           <HeaderSocials />
-          <div className="me">
-            <Image
-              alt="me"
-              layout="responsive"
-              width="513"
-              height="640"
-              style={{ borderRadius: "30%" }}
-              src="/bulb.jpg"
-            />
-          </div>
           <a href="#contact" className="scroll__down">
             Scroll Down
           </a>
-          <DLSAvatar />
+          <div className='DLSAvatar'>
+            <DLSAvatar />
+          </div>
         </div>
       </header>
     </>

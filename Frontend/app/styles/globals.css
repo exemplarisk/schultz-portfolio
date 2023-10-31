@@ -116,7 +116,7 @@ h1 {
 }
 
 section {
-    margin-top: 8rem;
+    margin-top: 14rem;
 }
 
 section>h2,
@@ -234,16 +234,11 @@ header {
     background: var(--color-primary);
 }
 
-/*------------------------------ME-------------------------------*/
+/*------------DLSAvatar--------------*/
 
-.me {
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+.DLSAvatar {
+    height: auto;
+    margin-top: -16vh;
 }
 
 /*------------SCROLL--------------*/
@@ -780,7 +775,7 @@ footer a {
     }
 
     .about {
-        margin-top: 10rem;
+        margin-top: 44rem;
     }
 
     .about__me {
