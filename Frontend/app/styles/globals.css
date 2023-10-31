@@ -39,19 +39,19 @@ body {
 }
 
 /* Light mode styles */
-.light-mode {
+/* .light-mode {
     background-color: #ffffff;
     color: #333333;
-}
+} */
 
 /* Dark mode styles */
-.dark-mode {
+/* .dark-mode {
     background-color: #333333;
     color: #ffffff;
-}
+} */
 
 /* Button styles */
-.dark-mode-button {
+/* .dark-mode-button {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -95,7 +95,7 @@ body {
 .dark-mode-button span {
     position: relative;
     z-index: 2;
-}
+} */
 
 /* ============== COMMONS BELOW ================== */
 .container {
@@ -782,7 +782,7 @@ footer a {
 
     .about__me {
         width: 65%;
-        margin: 0 auto 3rem;
+        margin: 1 auto 3rem;
     }
 
     .about__cards {

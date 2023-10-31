@@ -11,7 +11,7 @@ import Story from '../components/story/Story';
 import Head from 'next/head';
 import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
 import PartyParticles from '../components/particles/PartyParticles';
-import DarkModeButton from '../components/darkmode/DarkModeButton';
+//import DarkModeButton from '../components/darkmode/DarkModeButton';
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
         />
         <meta name="language" content="en" />
       </Head>
-      <DarkModeButton />
       <Header />
       <Nav />
       <About />
