@@ -178,8 +178,8 @@ header {
 /*------------DLSAvatar--------------*/
 
 .DLSAvatar {
-    height: auto;
-    margin-top: -16vh;
+    height: 100vh;
+    margin-top: -10vh;
 }
 
 /*------------SCROLL--------------*/
@@ -701,6 +701,11 @@ footer a {
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
+
+    .DLSAvatar {
+        height: auto;
+        margin-top: -16vh;
+    }
 
     .header__socials,
     .scroll__down {
