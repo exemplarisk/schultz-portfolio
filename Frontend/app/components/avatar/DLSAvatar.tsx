@@ -1,8 +1,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import { AvatarProps } from '@readyplayerme/visage';
 
-const Avatar = dynamic(
-  () => import("@readyplayerme/visage").then((mod) => mod.Avatar),
+const Avatar = dynamic<AvatarProps>(
+  () => import("@readyplayerme/visage").then((mod) => mod.Avatar as any),
   { ssr: false }
 );
 
