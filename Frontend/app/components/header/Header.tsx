@@ -22,7 +22,7 @@ const Header = () => {
               width="513"
               height="640"
               style={{ borderRadius: "30%" }}
-              src="/mepio.jpg"
+              src="/bulb.jpg"
             />
           </div>
           <a href="#contact" className="scroll__down">

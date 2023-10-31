@@ -238,13 +238,11 @@ header {
 /*------------------------------ME-------------------------------*/
 
 .me {
-    background: linear-gradient(#363ba2, transparent);
     width: 22rem;
     height: 30rem;
     position: absolute;
     left: calc(50% - 11rem);
     margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
@@ -309,7 +307,6 @@ nav a.active {
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     display: grid;
     place-items: center;
 }
@@ -694,6 +691,12 @@ footer a {
         margin-top: 6rem;
     }
 
+    .headercontainer {
+        text-align: center;
+        height: 90%;
+        position: relative;
+    }
+
     .about__container {
         grid-template-columns: 1fr;
         gap: 0;
@@ -853,9 +856,4 @@ footer a {
         height: 234px;
         border-radius: 1.5rem;
     }
-
-    .me {
-        height: 21rem;
-    }
-
 }

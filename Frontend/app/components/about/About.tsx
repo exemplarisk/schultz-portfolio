@@ -15,7 +15,7 @@ const About = () => {
             <Image
               width="946px"
               height="1048px"
-              src="/section2.jpg"
+              src="/earth.jpg"
               alt="img"
             ></Image>
           </div>
