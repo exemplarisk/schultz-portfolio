@@ -13,6 +13,8 @@
     "@chakra-ui/theme": "^2.1.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@readyplayerme/react-avatar-creator": "^0.3.0",
+    "@readyplayerme/visage": "^4.11.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.15",
     "next": "12.1.6",

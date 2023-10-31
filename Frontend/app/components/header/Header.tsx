@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import CTA from './CTA'
 import HeaderSocials from './HeaderSocials';
+import DLSAvatar from '../avatar/DLSAvatar';
 
 const Header = () => {
   return (
@@ -28,6 +29,7 @@ const Header = () => {
           <a href="#contact" className="scroll__down">
             Scroll Down
           </a>
+          <DLSAvatar />
         </div>
       </header>
     </>

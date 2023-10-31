@@ -3,10 +3,11 @@ import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import Image from "next/image";
+import DLSAvatar from "../avatar/DLSAvatar";
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="about">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
       <div className="container about__container">
@@ -39,8 +40,8 @@ const About = () => {
             </article>
           </div>
           <p>
-            I am a System developer with continuous desire to learn. I have
-            been developing web applications for four years, and for two years
+            I am a System developer with continuous desire to learn. I have been
+            developing web applications for four years, and for two years
             professionally. I am specialized in frontend development using
             TypeScript, React, NextJS, MaterialUI, ChakraUI, TailwindCSS, Styled
             Components and more highend tools and frameworks!
