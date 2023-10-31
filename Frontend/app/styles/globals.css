@@ -701,10 +701,6 @@ footer a {
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
 
-    .DLSAvatar {
-        margin-top: -16vh;
-    }
-
     .header__socials,
     .scroll__down {
         display: none;

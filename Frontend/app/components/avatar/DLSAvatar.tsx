@@ -12,7 +12,12 @@ function DLSAvatar() {
     "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
 
   return (
-    <Avatar modelSrc={avatarUrl} cameraInitialDistance={3} shadows={true} />
+    <Avatar
+      modelSrc={avatarUrl}
+      cameraInitialDistance={3}
+      shadows={true}
+      headMovement={true}
+    />
   );
 }
 
