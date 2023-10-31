@@ -703,7 +703,6 @@ footer a {
 @media screen and (max-width: 600px) {
 
     .DLSAvatar {
-        height: auto;
         margin-top: -16vh;
     }
 
@@ -718,10 +717,6 @@ footer a {
 
     section>h2 {
         margin-bottom: 2rem;
-    }
-
-    .about {
-        margin-top: 44rem;
     }
 
     .about__me {
