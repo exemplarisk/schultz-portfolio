@@ -3,7 +3,6 @@ import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
 import Image from "next/image";
-import DLSAvatar from "../avatar/DLSAvatar";
 
 const About = () => {
   return (
