@@ -7,17 +7,17 @@ const Avatar = dynamic<AvatarProps>(
   { ssr: false }
 );
 
-function DLSAvatar() {
+function DLSAvatar({ animationSrc }: { animationSrc?: string }) {
   const avatarUrl =
     "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
 
   return (
-    <Avatar
-      modelSrc={avatarUrl}
-      //animationSrc="/standup.fbx"
-      cameraInitialDistance={5}
-      shadows={true}
-    />
+      <Avatar
+        modelSrc={avatarUrl}
+        animationSrc={animationSrc}
+        cameraInitialDistance={5}
+        shadows={true}
+      />
   );
 }
 

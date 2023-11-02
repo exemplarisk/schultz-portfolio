@@ -182,14 +182,10 @@ header {
 .DLSAvatar {
     height: 80%;
     position: absolute;
-    /* Changed from relative to absolute */
     width: 40%;
     top: 50%;
-    /* Position halfway from the top */
     left: 50%;
-    /* Position halfway from the left */
     transform: translate(-50%, -50%);
-    /* Shifts the element back by half of its width and height */
     border-radius: 25px;
     overflow: hidden;
     z-index: 10;
