@@ -15,13 +15,13 @@ const Header = () => {
             Ideas Engineer & Miscellaneous Specialist
           </h5>
           <CTA />
+          <div className="DLSAvatar">
+            <DLSAvatar />
+          </div>
           <HeaderSocials />
           <a href="#contact" className="scroll__down">
             Scroll Down
           </a>
-          <div className='DLSAvatar'>
-            <DLSAvatar />
-          </div>
         </div>
       </header>
     </>

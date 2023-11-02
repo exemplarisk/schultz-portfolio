@@ -155,6 +155,8 @@ header {
     display: flex;
     gap: 1.2rem;
     justify-content: center;
+    position: relative;
+    z-index: 11;
 }
 
 /*=======================SOCIALS========================*/
@@ -178,7 +180,19 @@ header {
 /*------------DLSAvatar--------------*/
 
 .DLSAvatar {
-    height: 80vh;
+    height: 80%;
+    position: absolute;
+    /* Changed from relative to absolute */
+    width: 40%;
+    top: 50%;
+    /* Position halfway from the top */
+    left: 50%;
+    /* Position halfway from the left */
+    transform: translate(-50%, -50%);
+    /* Shifts the element back by half of its width and height */
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 10;
 }
 
 /*------------SCROLL--------------*/
@@ -199,7 +213,7 @@ nav {
     width: max-content;
     display: block;
     padding: 0.7rem 1.7rem;
-    z-index: 2;
+    z-index: 12;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -696,10 +710,19 @@ footer a {
         gap: 1.5rem;
     }
 
+    .DLSAvatar {
+        width: 50%;
+    }
 }
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
 @media screen and (max-width: 600px) {
+
+    .DLSAvatar {
+        width: 70%;
+        height: 100%;
+        top: 70%;
+    }
 
     .header__socials,
     .scroll__down {

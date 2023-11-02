@@ -14,9 +14,9 @@ function DLSAvatar() {
   return (
     <Avatar
       modelSrc={avatarUrl}
-      cameraInitialDistance={3}
+      //animationSrc="/standup.fbx"
+      cameraInitialDistance={5}
       shadows={true}
-      headMovement={true}
     />
   );
 }
