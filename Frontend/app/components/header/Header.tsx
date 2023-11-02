@@ -16,7 +16,7 @@ const Header = () => {
           </h5>
           <CTA />
           <div className="DLSAvatar">
-            <DLSAvatar />
+            <DLSAvatar animationSrc='/Salute.fbx'/>
           </div>
           <HeaderSocials />
           <a href="#contact" className="scroll__down">
