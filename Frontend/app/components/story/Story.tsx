@@ -1,13 +1,16 @@
 import React from "react";
 import { storys } from "./data/storys";
+import { linkifyText } from "../../utils/linkifyText"
 import Image from "next/image";
-// import Swiper core and required modules
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+
+const links: { [key: string]: string } = {
+  array:
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+};
 
 const Story = () => {
   return (
@@ -36,7 +39,9 @@ const Story = () => {
                 ></Image>
               </div>
               <h5>{v.title}</h5>
-              <small className="story__review">{v.text}</small>
+              <small className="story__review">
+                {linkifyText({ text: v.text, links })}
+              </small>
             </SwiperSlide>
           );
         })}
