@@ -11,7 +11,8 @@ import Story from '../components/story/Story';
 import Head from 'next/head';
 import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
 import PartyParticles from '../components/particles/PartyParticles';
-import DLSAvatar from '../components/avatar/DLSAvatar';
+
+
 
 const Home: NextPage = () => {
   return (
