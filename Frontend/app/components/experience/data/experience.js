@@ -1,34 +1,34 @@
 export const experience = {
   frontend: [
     {
-      name: "HTML",
+      name: "React",
       level: "Proficient",
     },
     {
-      name: "CSS",
-      level: "Proficient",
+      name: "NextJS",
+      level: "Advanced",
     },
     {
       name: "TypeScript",
       level: "Proficient",
     },
     {
-      name: "React",
-      level: "Proficient",
-    },
-    {
-      name: "NextJS",
-      level: "Proficient",
-    },
-    {
       name: "MaterialUI",
+      level: "Advanced",
+    },
+    {
+      name: "SASS/SCSS",
+      level: "Advanced",
+    },
+    {
+      name: "Framer Motion",
       level: "Proficient",
     },
   ],
   backend: [
     {
       name: ".NET",
-      level: "Advanced",
+      level: "Proficient",
     },
     {
       name: "SQL",
@@ -54,15 +54,15 @@ export const experience = {
   essential: [
     {
       name: "GIT",
-      level: "Expert",
+      level: "Advanced",
     },
     {
       name: "DevOps",
-      level: "Expert",
+      level: "Advanced",
     },
     {
       name: "AGILE",
-      level: "Advanced",
+      level: "Proficient",
     },
     {
       name: "Project Management",

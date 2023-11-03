@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h5>Most Recent Work</h5>
-      <h2>2022</h2>
+      <h2>latest creations</h2>
 
       <div className="container portfolio__container">
         <article className="portfolio__item">
