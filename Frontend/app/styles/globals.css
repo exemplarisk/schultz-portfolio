@@ -195,13 +195,11 @@ header {
 
 .scroll__down {
     position: absolute;
-    left: 2rem;
-    right: -4rem;
-    bottom: 5rem;
-    top: 0;
+    bottom: 54%;
+    right: -2rem;
     transform: rotate(90deg);
     font-weight: 300;
-    font-size: 0.9rem
+    font-size: 0.9rem;
 }
 
 /*-----------------------NAV--------------------------*/
@@ -702,6 +700,11 @@ footer a {
     .permalinks {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .scroll__down {
+        bottom: 47%;
+
     }
 
     .DLSAvatar {

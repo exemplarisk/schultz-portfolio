@@ -8,12 +8,12 @@ const Avatar = dynamic<AvatarProps>(
 );
 
 function DLSAvatar({ animationSrc }: { animationSrc?: string }) {
-  const avatarUrl =
+  const modelSrc =
     "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
 
   return (
       <Avatar
-        modelSrc={avatarUrl}
+        modelSrc={modelSrc}
         animationSrc={animationSrc}
         cameraInitialDistance={5}
         shadows={true}
