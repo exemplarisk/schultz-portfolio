@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 
 type Quote = {
   text: string;
@@ -43,15 +44,25 @@ const quotes: Quote[] = [
 const QuoteCarousel: React.FC = () => {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () =>
+      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length),
+    onSwipedRight: () =>
+      setCurrentQuoteIndex(
+        (prevIndex) => (prevIndex - 1 + quotes.length) % quotes.length
+      ),
+    trackTouch: true,
+  });
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 10000); // Change quote every 5 seconds
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="quote-carousel">
+    <div {...handlers} className="quote-carousel">
       <blockquote>
         <p>"{quotes[currentQuoteIndex].text}"</p>
         <div className="quotesfooter">— {quotes[currentQuoteIndex].author}</div>
