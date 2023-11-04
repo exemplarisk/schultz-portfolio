@@ -7,15 +7,19 @@ const Avatar = dynamic<AvatarProps>(
   { ssr: false }
 );
 
-function DLSAvatar({ animationSrc }: { animationSrc?: string }) {
-  const modelSrc =
-    "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
+interface DLSAvatarProps {
+  modelSrc: string;
+  animationSrc?: string;
+  cameraInitialDistance: number;
+}
+
+function DLSAvatar({ modelSrc, animationSrc, cameraInitialDistance }: DLSAvatarProps) {
 
   return (
       <Avatar
         modelSrc={modelSrc}
         animationSrc={animationSrc}
-        cameraInitialDistance={5}
+        cameraInitialDistance={cameraInitialDistance}
         shadows={true}
       />
   );

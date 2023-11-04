@@ -38,6 +38,10 @@ body {
     line-height: 1.7;
 }
 
+.BaseCanvas-module_base-canvas__Xjohd {
+    pointer-events: none !important;
+}
+
 /* ============== COMMONS BELOW ================== */
 .container {
     width: var(--container-width-lg);
@@ -256,14 +260,16 @@ nav a.active {
 }
 
 .about__me-image {
-    border-radius: 2rem;
+    border-radius: 10rem;
     overflow: hidden;
-    transform: rotate(10deg);
     transition: var(--transition);
+    height: 200%;
+    width: 100%;
+    z-index: 9;
 }
 
 .about__me-image:hover {
-    transform: rotate(0);
+    transform: rotate(10deg);
 }
 
 .about__cards {
@@ -678,6 +684,10 @@ footer a {
 .footer__copyright {
     margin-bottom: 4rem;
     color: var(--color-bg);
+}
+
+.about__me-image {
+    margin-bottom: 100%;
 }
 
 

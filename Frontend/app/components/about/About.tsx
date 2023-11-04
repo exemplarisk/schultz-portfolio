@@ -2,22 +2,23 @@ import React from "react";
 import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
-import Image from "next/image";
+import DLSAvatar from "../avatar/DLSAvatar";
 
 const About = () => {
+  const modelSrc = "https://models.readyplayer.me/65464e4ce42e04abf894cb73.glb";
+
   return (
     <section id="about" className="about">
       <h5>Get To Know</h5>
       <h2>about me</h2>
       <div className="container about__container">
         <div className="about__me">
-          <div className="about__me-image">
-            <Image
-              width="946px"
-              height="1048px"
-              src="/earth.jpg"
-              alt="img"
-            ></Image>
+          <div style={{ pointerEvents: "none" }} className="about__me-image">
+            <DLSAvatar
+              modelSrc={modelSrc}
+              animationSrc="/drums.fbx"
+              cameraInitialDistance={5}
+            />
           </div>
         </div>
         <div className="about__content">
