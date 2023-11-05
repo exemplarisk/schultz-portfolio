@@ -26,12 +26,12 @@ const About = () => {
             <article className="about__card">
               <BiCode className="about__icon" />
               <h5>Role</h5>
-              <small>System developer</small>
+              <small>System developer & Tech Lead</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>2+ years working experience</small>
+              <small>3+ years working experience</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
