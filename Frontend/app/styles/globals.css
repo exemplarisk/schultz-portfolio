@@ -558,6 +558,7 @@ nav a.active {
     background-color: #2c2f33;
     border-radius: 8px;
     padding: 20px;
+    min-height: 200px;
     max-height: 500px;
     overflow-y: auto;
     display: flex;

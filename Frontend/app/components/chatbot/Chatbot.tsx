@@ -67,7 +67,7 @@ const ChatbotComponent: React.FC = () => {
   return (
     <div>
       <div className="chatbot-header">
-        <h2>Have a conversation with my digital assistant</h2>
+        <h2>OR have a conversation with my digital assistant</h2>
         <p className="chatbot-disclaimer">
           Kindly note that my assistant is undergoing training.. Responses may not always be completely accurate.
         </p>
