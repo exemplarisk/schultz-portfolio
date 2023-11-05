@@ -16,16 +16,30 @@ const ChatbotComponent: React.FC = () => {
   const [conversation, setConversation] = useState<Message[]>([]);
   const [isBotTyping, setIsBotTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+const [initialLoad, setInitialLoad] = useState(true);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    const timer = setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
+    }, 100);
+
+    return () => clearTimeout(timer);
   };
 
   useEffect(() => {
-    scrollToBottom();
+    if (initialLoad) {
+      setInitialLoad(false);
+    } else {
+      if (
+        conversation.length > 0 &&
+        conversation[conversation.length - 1].from === "bot"
+      ) {
+        scrollToBottom();
+      }
+    }
   }, [conversation]);
 
   const sendMessageToChatbot = async (message: string) => {
@@ -69,7 +83,8 @@ const ChatbotComponent: React.FC = () => {
       <div className="chatbot-header">
         <h2>OR have a conversation with my digital assistant</h2>
         <p className="chatbot-disclaimer">
-          Kindly note that my assistant is undergoing training.. Responses may not always be completely accurate.
+          Kindly note that my assistant is undergoing training.. Responses may
+          not always be completely accurate.
         </p>
       </div>
       <div className="chatbot-conversation">

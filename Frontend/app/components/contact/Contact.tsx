@@ -2,35 +2,9 @@ import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { BsLinkedin } from "react-icons/bs";
-import emailjs from "emailjs-com";
-import swal from "sweetalert";
 import ChatbotComponent from "../chatbot/Chatbot";
 
 const Contact = () => {
-  const triggerSwal = () => {
-    return swal({
-      text: "Email Sent!",
-      icon: "success",
-      closeOnClickOutside: true,
-    });
-  };
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_izlg2bj",
-        "template_z33zd8m",
-        e.target,
-        "lSmoQpjwwaAGjB7Fi"
-      )
-      .then(() => {
-        triggerSwal()
-      });
-
-    e.target.reset();
-  };
 
   return (
     <section id="contact">
