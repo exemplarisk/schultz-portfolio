@@ -22,7 +22,7 @@ export default async function handler(
       const gptResponse = await openai.completions.create({
         model: "text-davinci-003", // Replace with your model of choice
         prompt: message,
-        max_tokens: 150,
+        max_tokens: 200,
         temperature: 0.5,
       });
 

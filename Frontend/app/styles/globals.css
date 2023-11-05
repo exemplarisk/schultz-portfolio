@@ -509,6 +509,166 @@ nav a.active {
 }
 
 
+/*-----------------Chatbot------------------*/
+
+/* Chatbot main container styles */
+.chatbot-container {
+    font-family: Arial, sans-serif;
+    /* Consistent font for the chatbot */
+}
+
+/* Chatbot header styles */
+.chatbot-header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chatbot-header h2 {
+    margin: 0 0 5px;
+    /* Combined margin for top and bottom */
+    font-size: 1.25em;
+}
+
+.chatbot-header p {
+    font-size: 0.9em;
+    margin: 0;
+    /* Removed top margin to collapse unnecessary space */
+}
+
+/* Disclaimer specific styles */
+.chatbot-disclaimer {
+    color: inherit;
+    /* Inherits color from parent for consistency */
+    font-style: italic;
+    font-size: 0.85em;
+    margin-top: 5px;
+    background-color: rgba(44, 62, 80, 0.7);
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 6px;
+    /* Add padding for better spacing around the text */
+}
+
+/* Conversation area styles */
+.chatbot-conversation {
+    background-color: #2c2f33;
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styles for the conversation area */
+.chatbot-conversation::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chatbot-conversation::-webkit-scrollbar-track {
+    background: #2c2f33;
+}
+
+.chatbot-conversation::-webkit-scrollbar-thumb {
+    background: #4b6cb7;
+    border-radius: 10px;
+    /* Added border-radius to scrollbar thumb for aesthetics */
+}
+
+.chatbot-conversation::-webkit-scrollbar-thumb:hover {
+    background: #2c3e50;
+}
+
+/* Chat message styles */
+.chatbot-message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    width: auto;
+    /* Changed from 100% to auto for better content fitting */
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* User message specific styles */
+.chatbot-message.user {
+    background-color: #4b6cb7;
+    color: white;
+    align-self: flex-end;
+    margin: 5px 10px 5px auto;
+    /* Combined margin for shorthand */
+}
+
+/* Bot message specific styles */
+.chatbot-message.bot {
+    background-color: #23272a;
+    color: #ddd;
+    align-self: flex-start;
+    margin: 5px auto 5px 10px;
+    /* Combined margin for shorthand */
+}
+
+/* Typing indicator styles */
+.bot-typing {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    color: #bbb;
+    background-color: #23272a;
+    font-style: italic;
+}
+
+/* Form styles */
+.chatbot-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    /* Add margin-top for spacing between conversation and form */
+}
+
+.chatbot-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #4b6cb7;
+    background-color: #23272a;
+    color: white;
+    outline: none;
+}
+
+.chatbot-input::placeholder {
+    color: #bbb;
+}
+
+.chatbot-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #4b6cb7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    outline: none;
+}
+
+.chatbot-button:hover,
+.chatbot-button:focus {
+    background-color: #2c3e50;
+}
+
 /*-------------Quotes-----------------*/
 
 

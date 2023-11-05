@@ -4,6 +4,7 @@ import { RiMessengerLine } from "react-icons/ri";
 import { BsLinkedin } from "react-icons/bs";
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
+import ChatbotComponent from "../chatbot/Chatbot";
 
 const Contact = () => {
   const triggerSwal = () => {
@@ -63,24 +64,7 @@ const Contact = () => {
             </a>
           </article>
         </div>
-        <form id="form" onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
-          />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows={7}
-            placeholder="Your Message"
-            required
-          />
-          <button className="btn btn-primary" type="submit">
-            Send Message
-          </button>
-        </form>
+        <ChatbotComponent />
       </div>
     </section>
   );
