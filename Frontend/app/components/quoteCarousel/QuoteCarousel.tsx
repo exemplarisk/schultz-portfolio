@@ -54,13 +54,6 @@ const QuoteCarousel: React.FC = () => {
     trackTouch: true,
   });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div {...handlers} className="quote-carousel">
       <blockquote>
