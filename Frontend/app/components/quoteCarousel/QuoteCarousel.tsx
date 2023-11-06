@@ -52,6 +52,7 @@ const QuoteCarousel: React.FC = () => {
         (prevIndex) => (prevIndex - 1 + quotes.length) % quotes.length
       ),
     trackTouch: true,
+    trackMouse: true,
   });
 
   return (

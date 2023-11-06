@@ -17,9 +17,8 @@ const Footer = () => {
             marginBottom: "10px",
           }}
         >
-          My Philosophical Footprint
+          My impressions of wisdom
         </h2>
-        <h3>impressions of wisdom</h3>
         <QuoteCarousel />
         <ul className="permalinks">
           {links.map((x) => {
