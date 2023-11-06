@@ -10,7 +10,7 @@ const Footer = () => {
       <section style={{ marginTop: "2rem" }}>
         <h2
           style={{
-            fontSize: "1.5rem",
+            fontSize: "2rem",
             color: "#FFFFFF",
             textShadow: "2px 2px 4px #000000",
             fontWeight: "bold",
