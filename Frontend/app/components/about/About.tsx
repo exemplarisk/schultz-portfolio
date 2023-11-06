@@ -5,7 +5,7 @@ import { VscFolderLibrary } from "react-icons/vsc";
 import DLSAvatar from "../avatar/DLSAvatar";
 
 const About = () => {
-  const modelSrc = "https://models.readyplayer.me/65464e4ce42e04abf894cb73.glb";
+  const modelSrc = "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
 
   return (
     <section id="about" className="about">
