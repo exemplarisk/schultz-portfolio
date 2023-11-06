@@ -926,7 +926,11 @@ footer a {
     .DLSAvatar {
         width: 70%;
         height: 220%;
-        margin-top: -50%;
+    }
+
+    header {
+        padding-top: 3rem;
+        margin-bottom: 70%;
     }
 
     .header__socials,
