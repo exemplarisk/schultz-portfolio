@@ -27,7 +27,7 @@ const About = () => {
             <article className="about__card">
               <BiCode className="about__icon" />
               <h5>Role</h5>
-              <small>System developer & Tech Lead</small>
+              <small>System developer</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
@@ -42,8 +42,7 @@ const About = () => {
           </div>
           <p>
             I am a System developer with continuous desire to learn. I have been
-            developing web applications for four years, and for two years
-            professionally. I am specialized in frontend development using
+            developing web applications for the past four years. I am specialized in frontend development using
             TypeScript, React, NextJS, MaterialUI, ChakraUI, TailwindCSS, Styled
             Components and more highend tools and frameworks!
           </p>
