@@ -18,6 +18,7 @@ const About = () => {
               modelSrc={modelSrc}
               animationSrc="/drums.fbx"
               cameraInitialDistance={5}
+              cameraTarget={1.3}
             />
           </div>
         </div>

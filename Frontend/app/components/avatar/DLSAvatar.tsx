@@ -11,17 +11,19 @@ interface DLSAvatarProps {
   modelSrc: string;
   animationSrc?: string;
   cameraInitialDistance: number;
+  cameraTarget: number;
 }
 
-function DLSAvatar({ modelSrc, animationSrc, cameraInitialDistance }: DLSAvatarProps) {
+function DLSAvatar({ modelSrc, animationSrc, cameraInitialDistance, cameraTarget }: DLSAvatarProps) {
 
   return (
-      <Avatar
-        modelSrc={modelSrc}
-        animationSrc={animationSrc}
-        cameraInitialDistance={cameraInitialDistance}
-        shadows={true}
-      />
+    <Avatar
+      modelSrc={modelSrc}
+      animationSrc={animationSrc}
+      cameraInitialDistance={cameraInitialDistance}
+      shadows={true}
+      cameraTarget={cameraTarget}
+    />
   );
 }
 

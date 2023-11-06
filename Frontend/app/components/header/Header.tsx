@@ -22,6 +22,7 @@ const Header = () => {
                 modelSrc={modelSrc}
                 animationSrc="/Salute.fbx"
                 cameraInitialDistance={5}
+                cameraTarget={1.0}
               />
             </div>
             <HeaderSocials />

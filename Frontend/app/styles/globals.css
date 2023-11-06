@@ -193,6 +193,7 @@ header {
     border-radius: 25px;
     overflow: hidden;
     z-index: 10;
+    margin-top: 15%;
 }
 
 /*------------SCROLL--------------*/
@@ -935,7 +936,7 @@ footer a {
     .DLSAvatar {
         width: 70%;
         height: 220%;
-        margin-top: -50%;
+        margin-top: -10%;
     }
 
     header {
