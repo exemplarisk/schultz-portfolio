@@ -16,7 +16,7 @@ const ChatbotComponent: React.FC = () => {
   const [conversation, setConversation] = useState<Message[]>([]);
   const [isBotTyping, setIsBotTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-const [initialLoad, setInitialLoad] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
 
   const scrollToBottom = () => {
     const timer = setTimeout(() => {
@@ -79,7 +79,7 @@ const [initialLoad, setInitialLoad] = useState(true);
   };
 
   return (
-    <div>
+    <div className="chatbot-container">
       <div className="chatbot-header">
         <h2>OR have a conversation with my digital assistant</h2>
         <p className="chatbot-disclaimer">
@@ -104,7 +104,7 @@ const [initialLoad, setInitialLoad] = useState(true);
         <div id="scrollref" ref={messagesEndRef} />
         {isBotTyping && (
           <div className="chatbot-message bot-typing">
-            Hang on, im typing...
+            Hang on, I'm typing...
           </div>
         )}
       </div>
@@ -114,7 +114,7 @@ const [initialLoad, setInitialLoad] = useState(true);
           type="text"
           value={userInput}
           onChange={handleUserInput}
-          placeholder="Ask your question here..."
+          placeholder="I'm here to help! What can I do for you?"
         />
         <button className="chatbot-button" type="submit">
           Send
