@@ -526,12 +526,10 @@ nav a.active {
 }
 
 .chatbot-header h2 {
-    margin: 0 0 5px;
     font-size: 1.25em;
 }
 
 .chatbot-header p {
-    font-size: 0.9em;
     margin: 0;
 }
 
@@ -550,7 +548,7 @@ nav a.active {
     background-color: #2c2f33;
     border-radius: 8px;
     padding: 20px;
-    min-height: 200px;
+    min-height: 100px;
     max-height: 500px;
     overflow-y: auto;
     display: flex;
@@ -937,12 +935,12 @@ footer a {
     .DLSAvatar {
         width: 70%;
         height: 220%;
-        margin-top: 25%;
+        margin-top: 50%;
     }
 
     header {
         padding-top: 3rem;
-        margin-bottom: 50%;
+        margin-bottom: 100%;
     }
 
     .header__socials,
