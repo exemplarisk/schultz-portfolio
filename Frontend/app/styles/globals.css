@@ -963,6 +963,11 @@ footer a {
         height: 160%;
         margin-top: 30%;
     }
+
+    .quote-carousel {
+        margin-bottom: 6vh;
+
+    }
 }
 
 /*================SMALL DEVICE STYLINGS BELOW================*/
@@ -1080,6 +1085,8 @@ footer a {
     .quote-carousel {
         max-width: 300px;
         padding: 10px 20px;
+        margin-bottom: 6vh;
+
     }
 
     blockquote {

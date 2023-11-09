@@ -8,17 +8,6 @@ const Footer = () => {
   return (
     <footer>
       <section style={{ marginTop: "2rem" }}>
-        <h2
-          style={{
-            fontSize: "2rem",
-            color: "#FFFFFF",
-            textShadow: "2px 2px 4px #000000",
-            fontWeight: "bold",
-            marginBottom: "10px",
-          }}
-        >
-          My impressions of wisdom
-        </h2>
         <QuoteCarousel />
         <ul className="permalinks">
           {links.map((x) => {
