@@ -10,17 +10,17 @@ const Portfolio = () => {
         <article className="portfolio__item">
           <div className="portfolio__item-image">
             <iframe
-              style={{borderRadius: "25px"}}
+              style={{ borderRadius: "25px" }}
               width="100%"
               height="400px"
-              src="https://casa-larios.vercel.app"
+              src="https://casaloslarios.com/sv/"
               title="casalarios"
             ></iframe>
           </div>
           <h3>Casa Los Larios</h3>
           <div className="portfolio__item-cta">
             <a
-              href="https://github.com/exemplarisk/casa-larios"
+              href="https://github.com/exemplarisk/casa-los-larios-v2"
               target="_blank"
               rel="noopener"
               className="btn"
@@ -28,7 +28,7 @@ const Portfolio = () => {
               GITHUB
             </a>
             <a
-              href="https://casa-larios.vercel.app"
+              href="https://casaloslarios.com/en/"
               target="_blank"
               rel="noopener"
               className="btn btn-primary"
