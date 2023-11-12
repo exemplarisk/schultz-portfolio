@@ -465,6 +465,13 @@ nav a.active {
     overflow: hidden;
 }
 
+        .portfolio__item-image iframe {
+            padding: 5px 2px;
+                border-radius: 25px;
+                width: 100%;
+                height: 600px;
+        }
+
 .portfolio__item h3 {
     margin: 1.2rem 0 2rem;
     border-bottom: 1px solid aliceblue;
@@ -1054,6 +1061,14 @@ footer a {
     .portfolio__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio__item {
+        padding: 0;
+    }
+
+    .portfolio__item-image iframe {
+        height: 400px;
     }
 
     .portfolio__item-cta>a {
