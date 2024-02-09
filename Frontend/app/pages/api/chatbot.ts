@@ -18,19 +18,27 @@ export default async function handler(
     const { message } = req.body;
 
     try {
-      // Make the call to the OpenAI API with the message
+      const personalContext = `Jonatan is a software developer specializing in Next.js, React, TypeScript, and CSS. He has built numerous web applications, including portfolio websites, e-commerce sites, and apartment rental platforms. Jonatan is passionate about creating intuitive, user-friendly interfaces and optimizing web performance. Jonatan lives in Sweden and his CV is available at the top of the page. The two avatars showing are created using ReadyPlayerMe.`;
+      const completePrompt = `${personalContext}\n\n${message}`;
+      
       const gptResponse = await openai.completions.create({
-        model: "text-davinci-003", // Replace with your model of choice
-        prompt: message,
+        model: "gpt-3.5-turbo-instruct", // Replace with your model of choice
+        prompt: completePrompt,
         max_tokens: 200,
         temperature: 0.5,
       });
 
       // Send back the response from OpenAI
       res.status(200).json({ botMessage: gptResponse.choices[0].text.trim() });
-    } catch (error) {
-      console.error("Error during OpenAI API call:", error);
-      res.status(500).json({ error: "Error during OpenAI API call" });
+    } catch (error: any) {
+      console.error(
+        "Error during OpenAI API call:",
+        error.response ? error.response.data : error.message
+      );
+      res.status(500).json({
+        error: "Error during OpenAI API call",
+        details: error.response ? error.response.data : error.message,
+      });
     }
   } else {
     // Handle any other HTTP methods
