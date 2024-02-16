@@ -1,1 +1,1 @@
-# [Jonatan Schultz]: Personal Website
+# jonatanschultz.com
