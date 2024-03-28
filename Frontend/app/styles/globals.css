@@ -987,7 +987,7 @@ footer a {
 
     header {
         padding-top: 3rem;
-        margin-bottom: 100%;
+        height: 30vh
     }
 
     .header__socials,
