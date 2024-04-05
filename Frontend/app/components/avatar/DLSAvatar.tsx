@@ -18,6 +18,7 @@ function DLSAvatar({ modelSrc, animationSrc, cameraInitialDistance, cameraTarget
 
   return (
     <Avatar
+      idleRotation
       modelSrc={modelSrc}
       animationSrc={animationSrc}
       cameraInitialDistance={cameraInitialDistance}

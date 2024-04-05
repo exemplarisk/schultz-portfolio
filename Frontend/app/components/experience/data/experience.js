@@ -69,7 +69,7 @@ export const experience = {
       level: "Proficient",
     },
     {
-      name: "Resource Management",
+      name: "Azure & K8s",
       level: "Proficient",
     },
     {

@@ -5,8 +5,8 @@ import DLSAvatar from '../avatar/DLSAvatar';
 import { useDeviceType, DeviceType } from '../../utils/useDeviceType';
 
 const Header = () => {
-  const deviceType = useDeviceType();
   const modelSrc = "https://models.readyplayer.me/65464e4ce42e04abf894cb73.glb";
+  const deviceType = useDeviceType();
 
     return (
       <>
@@ -18,7 +18,7 @@ const Header = () => {
               Ideas Engineer & Miscellaneous Specialist
             </h5>
             <CTA />
-            {deviceType !== DeviceType.Mobile && <div style={{ pointerEvents: "none" }} className="DLSAvatar">
+            {deviceType !== DeviceType.Mobile && <div className="DLSAvatar">
               <DLSAvatar
                 modelSrc={modelSrc}
                 animationSrc="/Salute.fbx"
