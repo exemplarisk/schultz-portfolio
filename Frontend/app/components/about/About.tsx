@@ -17,6 +17,7 @@ const About = () => {
             <DLSAvatar
               modelSrc={modelSrc}
               animationSrc="/drums.fbx"
+              idleRotation
               cameraInitialDistance={5}
               cameraTarget={1.3}
             />

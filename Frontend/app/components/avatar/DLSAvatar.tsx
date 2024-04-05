@@ -10,15 +10,16 @@ const Avatar = dynamic<AvatarProps>(
 interface DLSAvatarProps {
   modelSrc: string;
   animationSrc?: string;
+  idleRotation: boolean; 
   cameraInitialDistance: number;
   cameraTarget: number;
 }
 
-function DLSAvatar({ modelSrc, animationSrc, cameraInitialDistance, cameraTarget }: DLSAvatarProps) {
+function DLSAvatar({ modelSrc, animationSrc, idleRotation, cameraInitialDistance, cameraTarget }: DLSAvatarProps) {
 
   return (
     <Avatar
-      idleRotation
+      idleRotation={idleRotation}
       modelSrc={modelSrc}
       animationSrc={animationSrc}
       cameraInitialDistance={cameraInitialDistance}

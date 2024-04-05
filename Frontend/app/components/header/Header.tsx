@@ -22,6 +22,7 @@ const Header = () => {
               <DLSAvatar
                 modelSrc={modelSrc}
                 animationSrc="/Salute.fbx"
+                idleRotation={false}
                 cameraInitialDistance={5}
                 cameraTarget={1.0}
               />
