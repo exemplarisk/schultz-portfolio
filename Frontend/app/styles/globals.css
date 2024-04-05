@@ -478,7 +478,7 @@ nav a.active {
 .portfolio__item-cta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 
@@ -1062,7 +1062,11 @@ footer a {
     }
 
     .portfolio__item {
-        padding: 0;
+        padding: 0.2rem;
+    }
+
+    .portfolio__item h3 {
+        margin: 1.2rem;
     }
 
     .portfolio__item-image iframe {
