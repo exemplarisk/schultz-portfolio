@@ -1,4 +1,3 @@
-// linkifyText.tsx
 import React from "react";
 
 interface LinkDictionary {

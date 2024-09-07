@@ -22,13 +22,12 @@ export default async function handler(
       const completePrompt = `${personalContext}\n\n${message}`;
       
       const gptResponse = await openai.completions.create({
-        model: "gpt-3.5-turbo-instruct", // Replace with your model of choice
+        model: "gpt-3.5-turbo-instruct",
         prompt: completePrompt,
         max_tokens: 200,
         temperature: 0.5,
       });
 
-      // Send back the response from OpenAI
       res.status(200).json({ botMessage: gptResponse.choices[0].text.trim() });
     } catch (error: any) {
       console.error(
@@ -41,7 +40,6 @@ export default async function handler(
       });
     }
   } else {
-    // Handle any other HTTP methods
     res.setHeader("Allow", ["POST"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
