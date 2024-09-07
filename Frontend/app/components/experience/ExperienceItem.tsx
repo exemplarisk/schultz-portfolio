@@ -1,15 +1,22 @@
 import React from 'react';
-import ExperienceDetails from './ExperienceDetails';
-import ExperienceDescription from './ExperienceDescription';
+import { Skill } from './types/skill';
+import { BsPatchCheckFill } from 'react-icons/bs';
 
-const ExperienceItem = ({ experience }) => {
-  const { role, company, date, responsibilities } = experience;
+interface ExperienceItemProps {
+  experience: Skill;
+}
+
+export const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
+  const { name, level } = experience;
 
   return (
-    <div className="experience-item">
-      <ExperienceDetails role={role} company={company} date={date} />
-      <ExperienceDescription responsibilities={responsibilities} />
-    </div>
+    <article className="experience__details">
+      <BsPatchCheckFill className="experience__details-icon" />
+      <div>
+        <h4>{name}</h4>
+        <small className="text-light">{level}</small>
+      </div>
+    </article>
   );
 };
 
