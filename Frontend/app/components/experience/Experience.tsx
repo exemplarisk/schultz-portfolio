@@ -6,9 +6,7 @@ export const Experience = () => (
   <section id="experience">
     <h5>My Skills</h5>
     <h2>Expertise & Proficiency</h2>
-    <>
-      <ExperienceSection experiences={experiences} />
-    </>
+    <ExperienceSection experiences={experiences} />
   </section>
 );
 
