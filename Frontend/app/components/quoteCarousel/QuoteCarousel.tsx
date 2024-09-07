@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { quotes } from "./quotes";
+import { quotes } from "./data/quotes";
 
 const QuoteCarousel: React.FC = () => {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
