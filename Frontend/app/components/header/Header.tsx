@@ -2,7 +2,7 @@ import React from 'react'
 import CTA from './CTA'
 import HeaderSocials from './HeaderSocials';
 import DLSAvatar from '../avatar/DLSAvatar';
-import { useDeviceType, DeviceType } from '../../utils/useDeviceType';
+import { useDeviceType, DeviceType } from '../../hooks/useDeviceType';
 
 const Header = () => {
   const modelSrc = "https://models.readyplayer.me/65464e4ce42e04abf894cb73.glb";
