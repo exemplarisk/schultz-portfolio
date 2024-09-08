@@ -10,7 +10,7 @@ interface SkillCategoryProps {
 export const SkillCategory: React.FC<SkillCategoryProps> = ({ title, items }) => (
   <>
     <h3>{title}</h3>
-    <div className="experience__content">
+    <div className="skill__content">
       {items.map((skill, index) => (
         <SkillItem key={index} skill={skill} />
       ))}

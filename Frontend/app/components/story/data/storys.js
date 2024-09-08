@@ -8,7 +8,7 @@ export const storys = [
   {
     id: 2,
     title: "Originally from Sweden",
-    text: "But I’ve made homes in Guatemala, Spain, and China. Experiencing different cultures, uncovering their histories, and learning how they shape societies is what ignites my passion. It is a cornerstone of my life's mission to understand, and truly appreciate the wide array of global cultures. Drawing inspiration from each one of them, and merging these experiences into the story that defines me.",
+    text: "But I’ve made homes in Guatemala, Spain, and China. Experiencing different cultures, uncovering their histories, and learning how they shape societies is what ignites my passion. It is a cornerstone of my life's mission to understand, and truly appreciate the wide array of global cultures. Drawing inspiration from each one of them, and merging these skills into the story that defines me.",
     href: "/mep.jpg",
   },
   {

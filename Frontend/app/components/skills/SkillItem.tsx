@@ -10,8 +10,8 @@ export const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
   const { name, level } = skill;
 
   return (
-    <article className="experience__details">
-      <BsPatchCheckFill className="experience__details-icon" />
+    <article className="skill__details">
+      <BsPatchCheckFill className="skill__details-icon" />
       <div>
         <h4>{name}</h4>
         <small className="text-light">{level}</small>

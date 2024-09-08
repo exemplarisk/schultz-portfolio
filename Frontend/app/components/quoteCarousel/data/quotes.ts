@@ -2,7 +2,7 @@ import { Quote } from "../types/quote";
 
 export const quotes: Quote[] = [
   {
-    text: "Don't be afraid to start over.. This time, you restart with experience.",
+    text: "Don't be afraid to start over.. This time, you restart with skill.",
     author: "Unknown",
   },
   {
@@ -30,7 +30,7 @@ export const quotes: Quote[] = [
     author: "Dalai Lama",
   },
   {
-    text: "I am not the sum of my successes and failures. I am the sum of my experiences, and the impact I've had on others.",
+    text: "I am not the sum of my successes and failures. I am the sum of my skills, and the impact I've had on others.",
     author: "AI",
   },
 ];

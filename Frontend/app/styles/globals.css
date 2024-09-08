@@ -313,62 +313,62 @@ nav a.active {
 }
 
 
-/*-------------------------EXPERIENCE----------------------------------*/
-.experience__container {
+/*-------------------------skill----------------------------------*/
+.skill__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-.experience__container>div h3 {
+.skill__container>div h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-white);
 }
 
-.essential__experience>div h3 {
+.essential__skill>div h3 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-white);
 }
 
-.essential__experience {
+.essential__skill {
     margin-top: 3vh;
 }
 
-.experience__content {
+.skill__content {
     display: grid;
     grid-template-columns: 1fr 0.3fr;
     row-gap: 2rem;
 }
 
-.essential__experience__content {
+.essential__skill__content {
     display: grid;
     grid-template-columns: 1fr 0.25fr;
     row-gap: 2rem;
 }
 
-.experience__details {
+.skill__details {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.experience__details-icon {
+.skill__details-icon {
     color: var(--color-primary);
     flex-shrink: 0;
     width: 24px;
     height: 24px;
 }
 
-.experience__dev {
+.skill__dev {
     background: var(--color-bg-variant);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
 }
 
-.experience__dev:hover {
+.skill__dev:hover {
     cursor: default;
     -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
     -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
@@ -891,23 +891,23 @@ footer a {
         margin: 1rem 0 1.5rem;
     }
 
-    .experience__container {
+    .skill__container {
         grid-template-columns: 1fr;
     }
 
-    .essential__experience>div {
+    .essential__skill>div {
         width: 80%;
         padding: 2rem;
         margin: 0 auto;
     }
 
-    .experience__dev {
+    .skill__dev {
         width: 80%;
         padding: 2rem 1rem;
         margin: 0 auto;
     }
 
-    .experience__content {
+    .skill__content {
         padding: 1rem;
     }
 
@@ -1012,26 +1012,26 @@ footer a {
         margin: 1.5rem 0;
     }
 
-    .experience__container {
+    .skill__container {
         gap: 1rem;
     }
 
-    .experience__container>div {
+    .skill__container>div {
         width: 100%;
         padding: 2rem 1rem;
     }
 
-    .essential__experience {
+    .essential__skill {
         margin-top: 2vh;
     }
 
-    .essential__experience>div {
+    .essential__skill>div {
         margin-top: 2vh;
         width: 100%;
         padding: 2rem 1rem;
     }
 
-    .experience__dev {
+    .skill__dev {
         padding: 2.4rem;
     }
 

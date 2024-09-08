@@ -10,14 +10,14 @@ export const SkillContainer: React.FC<SkillContainerProps> = ({
 }) => {
   return (
     <>
-      <div className="container experience__container">
-        <div className="experience__dev">
+      <div className="container skill__container">
+        <div className="skill__dev">
           <SkillCategory
             title="Frontend Development"
             items={skills.frontend}
           />
         </div>
-        <div className="experience__dev">
+        <div className="skill__dev">
           <SkillCategory
             title="Backend Development"
             items={skills.backend}
@@ -25,8 +25,8 @@ export const SkillContainer: React.FC<SkillContainerProps> = ({
         </div>
       </div>
 
-      <div className="container essential__experience">
-        <div className="experience__dev">
+      <div className="container essential__skill">
+        <div className="skill__dev">
           <SkillCategory
             title="Essential Skills"
             items={skills.essential}

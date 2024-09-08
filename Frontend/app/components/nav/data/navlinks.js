@@ -16,8 +16,8 @@ export const links = [
     icon: <AiOutlineUser />,
   },
   {
-    name: "experience",
-    href: "#experience",
+    name: "skill",
+    href: "#skill",
     icon: <BiBook />,
   },
   {

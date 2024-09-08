@@ -8,8 +8,8 @@ export const links = [
     href: "#about",
   },
   {
-    name: "Experience",
-    href: "#experience",
+    name: "skill",
+    href: "#skill",
   },
   {
     name: "Services",

@@ -3,7 +3,7 @@ import { skills } from "./data/skills";
 import { SkillContainer } from "./SkillContainer";
 
 export const SkillSection = () => (
-  <section id="experience">
+  <section id="skill">
     <h5>My Skills</h5>
     <h2>Expertise & Proficiency</h2>
     <SkillContainer skills={skills} />
