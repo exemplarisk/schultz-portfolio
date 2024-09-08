@@ -2,12 +2,12 @@ import React from 'react';
 import { Skill } from './types/skill';
 import { BsPatchCheckFill } from 'react-icons/bs';
 
-interface ExperienceItemProps {
-  experience: Skill;
+interface SkillItemProps {
+  skill: Skill;
 }
 
-export const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
-  const { name, level } = experience;
+export const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
+  const { name, level } = skill;
 
   return (
     <article className="experience__details">
@@ -20,4 +20,4 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) =>
   );
 };
 
-export default ExperienceItem;
+export default SkillItem;

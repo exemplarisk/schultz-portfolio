@@ -11,7 +11,7 @@ type Message = {
   text: string;
 };
 
-const ChatbotComponent: React.FC = () => {
+const Chatbot: React.FC = () => {
   const [userInput, setUserInput] = useState<string>("");
   const [conversation, setConversation] = useState<Message[]>([]);
   const [isBotTyping, setIsBotTyping] = useState(false);
@@ -124,4 +124,4 @@ const ChatbotComponent: React.FC = () => {
   );
 };
 
-export default ChatbotComponent;
+export default Chatbot;

@@ -1,6 +1,6 @@
-import { Experience } from '../types/experience';
+import { SkillArea } from '../types/skill';
 
-export const experiences: Experience = {
+export const skills: SkillArea = {
   frontend: [
     { name: 'React', level: 'Proficient' },
     { name: 'NextJS', level: 'Advanced' },

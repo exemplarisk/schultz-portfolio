@@ -4,7 +4,7 @@ import Nav from '../components/nav/Nav';
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer';
 import Contact from '../components/contact/Contact';
-import Experience from '../components/experience/Experience';
+import SkillSection from '../components/skills/SkillSection';
 import Portfolio from '../components/portfolio/Portfolio';
 import Services from '../components/services/Services';
 import Story from '../components/story/Story';
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <Nav />
       <About />
       <BuyMeACoffeeWidget />
-      <Experience />
+      <SkillSection />
       <Services />
       <Portfolio />
       <Story />

@@ -1,35 +1,35 @@
-import ExperienceCategory from "./ExperienceCategory";
-import { Experience } from "./types/experience";
+import SkillCategory from "./SkillCategory";
+import { SkillArea } from "./types/skill";
 
-interface ExperienceSectionProps {
-  experiences: Experience;
+interface SkillContainerProps {
+  skills: SkillArea;
 }
 
-export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
-  experiences,
+export const SkillContainer: React.FC<SkillContainerProps> = ({
+  skills,
 }) => {
   return (
     <>
       <div className="container experience__container">
         <div className="experience__dev">
-          <ExperienceCategory
+          <SkillCategory
             title="Frontend Development"
-            items={experiences.frontend}
+            items={skills.frontend}
           />
         </div>
         <div className="experience__dev">
-          <ExperienceCategory
+          <SkillCategory
             title="Backend Development"
-            items={experiences.backend}
+            items={skills.backend}
           />
         </div>
       </div>
 
       <div className="container essential__experience">
         <div className="experience__dev">
-          <ExperienceCategory
+          <SkillCategory
             title="Essential Skills"
-            items={experiences.essential}
+            items={skills.essential}
           />
         </div>
       </div>
@@ -37,4 +37,4 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   );
 };
 
-export default ExperienceSection;
+export default SkillContainer;
