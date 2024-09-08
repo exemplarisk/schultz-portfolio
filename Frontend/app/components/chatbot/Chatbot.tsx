@@ -1,72 +1,11 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  ChangeEvent,
-  FormEvent,
-} from "react";
-
-type Message = {
-  from: "user" | "bot";
-  text: string;
-};
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import useScrollToBottom from "../../hooks/useScrollToBottom";
+import useChatbot from '../../hooks/useChatbot';
 
 const Chatbot: React.FC = () => {
   const [userInput, setUserInput] = useState<string>("");
-  const [conversation, setConversation] = useState<Message[]>([]);
-  const [isBotTyping, setIsBotTyping] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [initialLoad, setInitialLoad] = useState(true);
-
-  const scrollToBottom = () => {
-    const timer = setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }, 100);
-
-    return () => clearTimeout(timer);
-  };
-
-  useEffect(() => {
-    if (initialLoad) {
-      setInitialLoad(false);
-    } else {
-      if (
-        conversation.length > 0 &&
-        conversation[conversation.length - 1].from === "bot"
-      ) {
-        scrollToBottom();
-      }
-    }
-  }, [conversation]);
-
-  const sendMessageToChatbot = async (message: string) => {
-    setIsBotTyping(true);
-    try {
-      const response = await fetch("/api/chatbot", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message }),
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      const botMessage: string = data.botMessage;
-      setConversation((prevConversations) => [
-        ...prevConversations,
-        { from: "user", text: message },
-        { from: "bot", text: botMessage },
-      ]);
-      setIsBotTyping(false);
-    } catch (error) {
-      console.error("Error during chatbot communication:", error);
-    }
-  };
+  const { conversation, isBotTyping, sendMessageToChatbot } = useChatbot();
+  const messagesEndRef = useScrollToBottom(conversation);
 
   const handleUserInput = (event: ChangeEvent<HTMLInputElement>) => {
     setUserInput(event.target.value);
@@ -74,8 +13,10 @@ const Chatbot: React.FC = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendMessageToChatbot(userInput);
-    setUserInput("");
+    if (userInput.trim()) {
+      sendMessageToChatbot(userInput);
+      setUserInput("");
+    }
   };
 
   return (
@@ -101,7 +42,7 @@ const Chatbot: React.FC = () => {
             {message.text}
           </div>
         ))}
-        <div id="scrollref" ref={messagesEndRef} />
+        <div ref={messagesEndRef} />
         {isBotTyping && (
           <div className="chatbot-message bot-typing">
             Hang on, I'm typing...
