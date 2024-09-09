@@ -19,7 +19,7 @@ const Portfolio = () => {
             <a
               href="https://github.com/exemplarisk/casa-los-larios-v2"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="btn"
             >
               GITHUB
@@ -27,7 +27,7 @@ const Portfolio = () => {
             <a
               href="https://casaloslarios.com/en/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="btn btn-primary"
             >
               CASA LARIOS

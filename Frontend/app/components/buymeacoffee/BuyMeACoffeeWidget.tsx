@@ -6,7 +6,7 @@ const BuyMeACoffeeWidget = () => {
 
   return (
     <div className="coffee__container">
-      <a className="coffee__button" href="https://www.buymeacoffee.com/jonatanschultz" target="_blank">
+      <a className="coffee__button" href="https://www.buymeacoffee.com/jonatanschultz" target="_blank" rel="noopener noreferrer">
         <img className="coffee__image" src={path} alt="Buy Me A Coffee" />
       </a>
     </div>
