@@ -1,11 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import useScrollToBottom from "../../hooks/useScrollToBottom";
 import useChatbot from '../../hooks/useChatbot';
 
 const Chatbot: React.FC = () => {
   const [userInput, setUserInput] = useState<string>("");
   const { conversation, isBotTyping, sendMessageToChatbot } = useChatbot();
-  const messagesEndRef = useScrollToBottom(conversation);
 
   const handleUserInput = (event: ChangeEvent<HTMLInputElement>) => {
     setUserInput(event.target.value);
@@ -42,7 +40,6 @@ const Chatbot: React.FC = () => {
             {message.text}
           </div>
         ))}
-        <div ref={messagesEndRef} />
         {isBotTyping && (
           <div className="chatbot-message bot-typing">
             Hang on, I'm typing...
