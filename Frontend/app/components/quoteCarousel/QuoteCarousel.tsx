@@ -19,7 +19,7 @@ const QuoteCarousel: React.FC = () => {
   return (
     <div {...handlers} className="quote-carousel">
       <blockquote>
-        <p>"{quotes[currentQuoteIndex].text}"</p>
+        <p>&quot;{quotes[currentQuoteIndex].text}&quot;</p>
         <div className="quotesfooter">— {quotes[currentQuoteIndex].author}</div>
       </blockquote>
       <div className="quote-indicators">

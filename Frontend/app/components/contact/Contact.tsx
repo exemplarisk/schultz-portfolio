@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
-      <h2>Let's Connect</h2>
+      <h2>Let&apos;s Connect</h2>
 
       <div className="container contact__container">
         <div className="contact__options">

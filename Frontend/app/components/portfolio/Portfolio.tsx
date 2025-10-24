@@ -10,7 +10,7 @@ const Portfolio = () => {
         <article className="portfolio__item">
           <div className="portfolio__item-image">
             <iframe
-              src="https://casaloslarios.com/sv/"
+              src="https://casa-larios.vercel.app/"
               title="casalarios"
             ></iframe>
           </div>
@@ -26,7 +26,7 @@ const Portfolio = () => {
               GITHUB
             </a>
             <a
-              href="https://casaloslarios.com/en/"
+              href="https://casa-larios.vercel.app/"
               target="_blank"
               title="casa"
               rel="noopener noreferrer"

@@ -42,7 +42,7 @@ const Chatbot: React.FC = () => {
         ))}
         {isBotTyping && (
           <div className="chatbot-message bot-typing">
-            Hang on, I'm typing...
+            Hang on, I&apos;m typing...
           </div>
         )}
       </div>

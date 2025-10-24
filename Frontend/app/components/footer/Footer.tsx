@@ -19,10 +19,10 @@ const Footer = () => {
           })}
         </ul>
         <div className="footer__socials">
-          <a href="https://linkedin.com/in/jonatan-schultz/" target="_blank" title="linkedin">
+          <a href="https://linkedin.com/in/jonatan-schultz/" target="_blank" rel="noreferrer" title="linkedin">
             <BsLinkedin />
           </a>
-          <a href="https://github.com/exemplarisk" target="_blank" title="github">
+          <a href="https://github.com/exemplarisk" target="_blank" rel="noreferrer" title="github">
             <FaGithub />
           </a>
           <a href="/cv.pdf">CV</a>
