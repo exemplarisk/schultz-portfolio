@@ -13,6 +13,7 @@ export default async function handler(
 
     const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
+      organization: process.env.OPENAI_ORG_ID || process.env.OPENAI_ORGANIZATION,
     });
 
     const { message } = req.body;
@@ -30,13 +31,18 @@ export default async function handler(
 
       res.status(200).json({ botMessage: gptResponse.choices[0].text.trim() });
     } catch (error: any) {
-      console.error(
-        "Error during OpenAI API call:",
-        error.response ? error.response.data : error.message
-      );
-      res.status(500).json({
+      const status = error?.status || error?.response?.status || 500;
+      const details = error?.response?.data || error?.message || "Unknown error";
+      console.error("Error during OpenAI API call:", details);
+      if (status === 429) {
+        return res.status(429).json({
+          error: "OpenAI quota exceeded",
+          details,
+        });
+      }
+      return res.status(status).json({
         error: "Error during OpenAI API call",
-        details: error.response ? error.response.data : error.message,
+        details,
       });
     }
   } else {
