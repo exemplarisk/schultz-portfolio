@@ -2,12 +2,6 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
     "@chakra-ui/theme": "^2.1.0",
@@ -17,10 +11,10 @@
     "@readyplayerme/visage": "^4.11.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.15",
-    "next": "12.1.6",
+    "next": "^12.1.6",
     "openai": "^4.15.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-particles": "^2.3.3",
     "react-swipeable": "^7.0.1",
@@ -30,13 +24,20 @@
     "tsparticles": "^2.3.3"
   },
   "devDependencies": {
-    "@types/node": "18.0.0",
-    "@types/react": "18.0.14",
-    "@types/react-dom": "18.0.5",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
-    "typescript": "4.7.4",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "typescript": "^4.7.4",
     "typings-for-css-modules-loader": "^1.7.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "browserslist:update": "npx browserslist@latest --update-db"
   },
   "overrides": {
     "three-mesh-bvh": "^0.8.0"
