@@ -15,12 +15,13 @@
     "openai": "^4.15.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.37.0",
     "react-icons": "^4.4.0",
     "react-particles": "^2.3.3",
     "react-swipeable": "^7.0.1",
     "sweetalert": "^2.1.2",
     "swiper": "^8.4.2",
-    "three": "^0.159.0",
+    "three": "^0.180.0",
     "tsparticles": "^2.3.3"
   },
   "devDependencies": {

@@ -1,0 +1,9 @@
+{
+    "snyk.advanced.autoSelectOrganization": false,
+    "eslint.workingDirectories": [
+        {
+            "directory": "Frontend/app",
+            "changeProcessCWD": true
+        }
+    ]
+}

@@ -2,10 +2,9 @@ import React from "react";
 import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
-import DLSAvatar from "../avatar/DLSAvatar";
+import SignalBadge from "../avatar/SignalBadge";
 
 const About = () => {
-  const modelSrc = "https://models.readyplayer.me/65415b4d8b8b05014d60106c.glb";
 
   return (
     <section id="about" className="about">
@@ -13,14 +12,8 @@ const About = () => {
       <h2>about me</h2>
       <div className="container about__container">
         <div className="about__me">
-          <div style={{ pointerEvents: "none" }} className="about__me-image">
-            <DLSAvatar
-              modelSrc={modelSrc}
-              animationSrc="/drums.fbx"
-              idleRotation
-              cameraInitialDistance={5}
-              cameraTarget={1.3}
-            />
+          <div style={{ pointerEvents: "none" }} className="about__visual">
+            <SignalBadge />
           </div>
         </div>
         <div className="about__content">

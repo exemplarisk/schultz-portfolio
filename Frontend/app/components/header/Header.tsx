@@ -1,13 +1,8 @@
 import React from "react";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials";
-import DLSAvatar from "../avatar/DLSAvatar";
-import { useDeviceType, DeviceType } from "../../hooks/useDeviceType";
-
+import GlobeAvatar from "../avatar/GlobeAvatar";
 const Header = () => {
-  const modelSrc = "https://models.readyplayer.me/65464e4ce42e04abf894cb73.glb";
-  const deviceType = useDeviceType();
-
   return (
     <>
       <header>
@@ -18,17 +13,9 @@ const Header = () => {
             Ideas Engineer & Miscellaneous Specialist
           </h5>
           <CTA />
-          {deviceType !== DeviceType.Mobile && (
-            <div className="DLSAvatar">
-              <DLSAvatar
-                modelSrc={modelSrc}
-                animationSrc="/Salute.fbx"
-                idleRotation={false}
-                cameraInitialDistance={5}
-                cameraTarget={1.0}
-              />
-            </div>
-          )}
+          <div className="heroVisual">
+            <GlobeAvatar className="globeAvatar--hero" />
+          </div>
           <HeaderSocials />
           <a
             href="#contact"
