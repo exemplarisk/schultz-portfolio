@@ -20,7 +20,7 @@ const About = () => {
             <article className="about__card">
               <BiCode className="about__icon" />
               <h5>Role</h5>
-              <small>System developer</small>
+              <small>Ideas Engineer</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
@@ -34,13 +34,13 @@ const About = () => {
             </article>
           </div>
           <p>
-            I&apos;m a system developer who mostly lives in the frontend. TypeScript,
-            React, Next.js, and whatever CSS setup fits the job. I&apos;ve been building
-            web apps for years, and I still like the work best when something complicated
-            ends up feeling simple.
+            I&apos;m an ideas engineer. I sit between half-formed concepts and working
+            products. Most days that means TypeScript, React, and Next.js, but the real
+            work is shaping the idea first: what it should do, who it&apos;s for, and how
+            to make something complicated feel simple once it ships.
           </p>
           <a href="#contact" className="btn btn-primary">
-            Let´s Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import { SiBuymeacoffee } from "react-icons/si";
 import { links } from "./data/links";
 import QuoteCarousel from "../quoteCarousel/QuoteCarousel";
 
@@ -24,6 +25,16 @@ const Footer = () => {
           </a>
           <a href="https://github.com/exemplarisk" target="_blank" rel="noreferrer" title="github">
             <FaGithub />
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/jonatanschultz"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Buy me a coffee"
+            aria-label="Buy me a coffee"
+            className="footer__coffee"
+          >
+            <SiBuymeacoffee />
           </a>
           <button
             type="button"

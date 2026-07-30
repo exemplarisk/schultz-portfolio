@@ -153,27 +153,6 @@ header {
     width: 90%;
 }
 
-.coffee__button {
-    padding: 2em;
-    width: 20em;
-    cursor: initial;
-}
-
-.coffee__container {
-    display: flex;
-    justify-content: center;
-    margin-top: 8vh;
-}
-
-.coffee__image {
-    opacity: 0.8;
-}
-
-.coffee__image:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
 /*=======================CTA========================*/
 .cta {
     margin-top: 2.5rem;

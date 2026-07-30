@@ -9,7 +9,6 @@ import Portfolio from '../components/portfolio/Portfolio';
 import Services from '../components/services/Services';
 import Story from '../components/story/Story';
 import Head from 'next/head';
-import BuyMeACoffeeWidget from '../components/buymeacoffee/BuyMeACoffeeWidget';
 import PartyParticles from '../components/particles/PartyParticles';
 
 
@@ -32,7 +31,6 @@ const Home: NextPage = () => {
       <Header />
       <Nav />
       <About />
-      <BuyMeACoffeeWidget />
       <SkillSection />
       <Services />
       <Portfolio />
