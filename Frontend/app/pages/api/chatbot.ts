@@ -14,6 +14,7 @@ Keep answers under 120 words.`;
 
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 10;
+const INSTRUCT_MODEL = "gpt-3.5-turbo-instruct";
 
 type RateBucket = {
   count: number;
@@ -68,7 +69,6 @@ function getOrganizationId(): string | undefined {
   const raw =
     process.env.OPENAI_ORG_ID || process.env.OPENAI_ORGANIZATION || "";
   const trimmed = raw.trim();
-  // Only send a real org id. A wrong/placeholder value makes OpenAI return 403.
   if (!trimmed || !trimmed.startsWith("org-")) {
     return undefined;
   }
@@ -82,12 +82,43 @@ function createOpenAIClient(organization?: string) {
   });
 }
 
+function errorStatus(error: any): number {
+  return error?.status || error?.response?.status || 500;
+}
+
+function errorMessage(error: any): string {
+  return error?.error?.message || error?.message || "Unknown error";
+}
+
+function isModelAccessError(error: any): boolean {
+  const status = errorStatus(error);
+  const message = errorMessage(error).toLowerCase();
+  return (
+    status === 403 ||
+    status === 404 ||
+    message.includes("does not have access to model") ||
+    message.includes("model_not_found") ||
+    message.includes("not a chat model")
+  );
+}
+
+async function createInstructCompletion(openai: OpenAI, message: string) {
+  const prompt = `${SYSTEM_PROMPT}\n\nUser: ${message}\nAssistant:`;
+  const response = await openai.completions.create({
+    model: process.env.OPENAI_INSTRUCT_MODEL || INSTRUCT_MODEL,
+    prompt,
+    max_tokens: 220,
+    temperature: 0.6,
+  });
+  return response.choices?.[0]?.text?.trim() || "";
+}
+
 async function createChatCompletion(
   openai: OpenAI,
   message: string,
   model: string
 ) {
-  return openai.chat.completions.create({
+  const response = await openai.chat.completions.create({
     model,
     messages: [
       { role: "system", content: SYSTEM_PROMPT },
@@ -96,17 +127,30 @@ async function createChatCompletion(
     max_tokens: 220,
     temperature: 0.6,
   });
+  return response.choices?.[0]?.message?.content?.trim() || "";
 }
 
-function isAuthOrPermissionError(error: any): boolean {
-  const status = error?.status || error?.response?.status;
-  return status === 401 || status === 403;
-}
+async function generateBotMessage(openai: OpenAI, message: string) {
+  // This OpenAI project only allows the legacy instruct model. Prefer that
+  // unless an explicit chat model is configured and accessible.
+  const chatModel = process.env.OPENAI_CHAT_MODEL?.trim();
 
-function isModelError(error: any): boolean {
-  const status = error?.status || error?.response?.status;
-  const message = String(error?.error?.message || error?.message || "").toLowerCase();
-  return status === 404 || message.includes("model");
+  if (chatModel) {
+    try {
+      return await createChatCompletion(openai, message, chatModel);
+    } catch (error) {
+      if (!isModelAccessError(error)) {
+        throw error;
+      }
+      console.error(
+        "Chat model unavailable, falling back to instruct completions:",
+        errorStatus(error),
+        errorMessage(error)
+      );
+    }
+  }
+
+  return createInstructCompletion(openai, message);
 }
 
 export default async function handler(
@@ -154,54 +198,27 @@ export default async function handler(
   }
 
   const organization = getOrganizationId();
-  const preferredModel = process.env.OPENAI_CHAT_MODEL || "gpt-4o-mini";
-  const fallbackModel =
-    preferredModel === "gpt-3.5-turbo" ? "gpt-4o-mini" : "gpt-3.5-turbo";
 
   try {
     let openai = createOpenAIClient(organization);
-    let gptResponse;
+    let botMessage = "";
 
     try {
-      gptResponse = await createChatCompletion(openai, message, preferredModel);
+      botMessage = await generateBotMessage(openai, message);
     } catch (firstError: any) {
-      console.error(
-        "OpenAI primary request failed:",
-        firstError?.status || firstError?.response?.status,
-        firstError?.error?.message || firstError?.message
-      );
-
-      if (organization && isAuthOrPermissionError(firstError)) {
-        openai = createOpenAIClient(undefined);
-        try {
-          gptResponse = await createChatCompletion(
-            openai,
-            message,
-            preferredModel
-          );
-        } catch (secondError: any) {
-          if (isModelError(secondError) || isAuthOrPermissionError(secondError)) {
-            gptResponse = await createChatCompletion(
-              openai,
-              message,
-              fallbackModel
-            );
-          } else {
-            throw secondError;
-          }
-        }
-      } else if (isModelError(firstError)) {
-        gptResponse = await createChatCompletion(
-          openai,
-          message,
-          fallbackModel
+      // Wrong org binding can also 403. Retry once with the key alone.
+      if (organization && (errorStatus(firstError) === 401 || errorStatus(firstError) === 403)) {
+        console.error(
+          "OpenAI rejected organization-scoped request; retrying without organization:",
+          errorMessage(firstError)
         );
+        openai = createOpenAIClient(undefined);
+        botMessage = await generateBotMessage(openai, message);
       } else {
         throw firstError;
       }
     }
 
-    const botMessage = gptResponse.choices?.[0]?.message?.content?.trim();
     if (!botMessage) {
       res.status(502).json({
         error: "Empty model response",
@@ -212,8 +229,8 @@ export default async function handler(
 
     res.status(200).json({ botMessage });
   } catch (error: any) {
-    const status = error?.status || error?.response?.status || 500;
-    const details = error?.error?.message || error?.message || "Unknown error";
+    const status = errorStatus(error);
+    const details = errorMessage(error);
     console.error("Error during OpenAI API call:", status, details);
 
     if (status === 429) {
@@ -225,7 +242,6 @@ export default async function handler(
       return;
     }
 
-    // Do not forward upstream auth/permission codes (401/403) to the browser.
     res.status(502).json({
       error: "Error during OpenAI API call",
       botMessage:
