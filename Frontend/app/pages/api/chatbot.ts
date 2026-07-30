@@ -53,7 +53,6 @@ function checkRateLimit(ip: string): { allowed: boolean; retryAfterSec: number }
   return { allowed: true, retryAfterSec: 0 };
 }
 
-// Occasional cleanup so the map does not grow forever in long-lived processes
 function pruneRateBuckets(now: number) {
   if (rateBuckets.size < 500) {
     return;
@@ -63,6 +62,51 @@ function pruneRateBuckets(now: number) {
       rateBuckets.delete(key);
     }
   });
+}
+
+function getOrganizationId(): string | undefined {
+  const raw =
+    process.env.OPENAI_ORG_ID || process.env.OPENAI_ORGANIZATION || "";
+  const trimmed = raw.trim();
+  // Only send a real org id. A wrong/placeholder value makes OpenAI return 403.
+  if (!trimmed || !trimmed.startsWith("org-")) {
+    return undefined;
+  }
+  return trimmed;
+}
+
+function createOpenAIClient(organization?: string) {
+  return new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    ...(organization ? { organization } : {}),
+  });
+}
+
+async function createChatCompletion(
+  openai: OpenAI,
+  message: string,
+  model: string
+) {
+  return openai.chat.completions.create({
+    model,
+    messages: [
+      { role: "system", content: SYSTEM_PROMPT },
+      { role: "user", content: message },
+    ],
+    max_tokens: 220,
+    temperature: 0.6,
+  });
+}
+
+function isAuthOrPermissionError(error: any): boolean {
+  const status = error?.status || error?.response?.status;
+  return status === 401 || status === 403;
+}
+
+function isModelError(error: any): boolean {
+  const status = error?.status || error?.response?.status;
+  const message = String(error?.error?.message || error?.message || "").toLowerCase();
+  return status === 404 || message.includes("model");
 }
 
 export default async function handler(
@@ -84,7 +128,7 @@ export default async function handler(
     res.status(429).json({
       error: "Too many requests",
       botMessage:
-        "Whoa, slow down a bit — too many questions too quickly. Try again in a minute.",
+        "Whoa, slow down a bit. Too many questions too quickly. Try again in a minute.",
     });
     return;
   }
@@ -109,22 +153,53 @@ export default async function handler(
     return;
   }
 
-  const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-    organization: process.env.OPENAI_ORG_ID || process.env.OPENAI_ORGANIZATION,
-  });
+  const organization = getOrganizationId();
+  const preferredModel = process.env.OPENAI_CHAT_MODEL || "gpt-4o-mini";
+  const fallbackModel =
+    preferredModel === "gpt-3.5-turbo" ? "gpt-4o-mini" : "gpt-3.5-turbo";
 
   try {
-    const model = process.env.OPENAI_CHAT_MODEL || "gpt-4o-mini";
-    const gptResponse = await openai.chat.completions.create({
-      model,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: message },
-      ],
-      max_tokens: 220,
-      temperature: 0.6,
-    });
+    let openai = createOpenAIClient(organization);
+    let gptResponse;
+
+    try {
+      gptResponse = await createChatCompletion(openai, message, preferredModel);
+    } catch (firstError: any) {
+      console.error(
+        "OpenAI primary request failed:",
+        firstError?.status || firstError?.response?.status,
+        firstError?.error?.message || firstError?.message
+      );
+
+      if (organization && isAuthOrPermissionError(firstError)) {
+        openai = createOpenAIClient(undefined);
+        try {
+          gptResponse = await createChatCompletion(
+            openai,
+            message,
+            preferredModel
+          );
+        } catch (secondError: any) {
+          if (isModelError(secondError) || isAuthOrPermissionError(secondError)) {
+            gptResponse = await createChatCompletion(
+              openai,
+              message,
+              fallbackModel
+            );
+          } else {
+            throw secondError;
+          }
+        }
+      } else if (isModelError(firstError)) {
+        gptResponse = await createChatCompletion(
+          openai,
+          message,
+          fallbackModel
+        );
+      } else {
+        throw firstError;
+      }
+    }
 
     const botMessage = gptResponse.choices?.[0]?.message?.content?.trim();
     if (!botMessage) {
@@ -139,7 +214,7 @@ export default async function handler(
   } catch (error: any) {
     const status = error?.status || error?.response?.status || 500;
     const details = error?.error?.message || error?.message || "Unknown error";
-    console.error("Error during OpenAI API call:", details);
+    console.error("Error during OpenAI API call:", status, details);
 
     if (status === 429) {
       res.status(429).json({
@@ -150,7 +225,8 @@ export default async function handler(
       return;
     }
 
-    res.status(status >= 400 && status < 600 ? status : 500).json({
+    // Do not forward upstream auth/permission codes (401/403) to the browser.
+    res.status(502).json({
       error: "Error during OpenAI API call",
       botMessage:
         "Sorry, I hit a snag answering that. Please try again in a moment, or reach out via Contact.",
