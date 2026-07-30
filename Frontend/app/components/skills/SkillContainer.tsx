@@ -5,35 +5,14 @@ interface SkillContainerProps {
   skills: SkillArea;
 }
 
-export const SkillContainer: React.FC<SkillContainerProps> = ({
-  skills,
-}) => {
+export const SkillContainer: React.FC<SkillContainerProps> = ({ skills }) => {
   return (
-    <>
-      <div className="container skill__container">
-        <div className="skill__dev">
-          <SkillCategory
-            title="Frontend Development"
-            items={skills.frontend}
-          />
-        </div>
-        <div className="skill__dev">
-          <SkillCategory
-            title="Backend Development"
-            items={skills.backend}
-          />
-        </div>
-      </div>
-
-      <div className="container essential__skill">
-        <div className="skill__dev">
-          <SkillCategory
-            title="Essential Skills"
-            items={skills.essential}
-          />
-        </div>
-      </div>
-    </>
+    <div className="container skillsBoard">
+      <SkillCategory title="Frontend" items={skills.frontend} />
+      <SkillCategory title="Backend" items={skills.backend} />
+      <SkillCategory title="Architecture" items={skills.architecture} />
+      <SkillCategory title="Delivery" items={skills.essential} />
+    </div>
   );
 };
 

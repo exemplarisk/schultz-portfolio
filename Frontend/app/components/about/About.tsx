@@ -2,18 +2,17 @@ import React from "react";
 import { FaAward } from "react-icons/fa";
 import { BiCode } from "react-icons/bi";
 import { VscFolderLibrary } from "react-icons/vsc";
-import SignalBadge from "../avatar/SignalBadge";
+import AboutSnapshot from "./AboutSnapshot";
 
 const About = () => {
-
   return (
     <section id="about" className="about">
       <h5>Get To Know</h5>
       <h2>about me</h2>
       <div className="container about__container">
         <div className="about__me">
-          <div style={{ pointerEvents: "none" }} className="about__visual">
-            <SignalBadge />
+          <div className="about__visual">
+            <AboutSnapshot />
           </div>
         </div>
         <div className="about__content">
@@ -35,10 +34,10 @@ const About = () => {
             </article>
           </div>
           <p>
-            I am a System developer with continuous desire to learn. I have been
-            developing web applications for the past four years. I am specialized in frontend development using
-            TypeScript, React, NextJS, MaterialUI, ChakraUI, TailwindCSS, Styled
-            Components and more highend tools and frameworks!
+            I&apos;m a system developer who mostly lives in the frontend. TypeScript,
+            React, Next.js, and whatever CSS setup fits the job. I&apos;ve been building
+            web apps for years, and I still like the work best when something complicated
+            ends up feeling simple.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let´s Talk
