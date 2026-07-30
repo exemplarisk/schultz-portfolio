@@ -1,7 +1,20 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials";
-import GlobeAvatar from "../avatar/GlobeAvatar";
+
+const GlobeAvatar = dynamic(() => import("../avatar/GlobeAvatar"), {
+  ssr: false,
+  loading: () => (
+    <div className="globeAvatar globeAvatar--hero globeAvatar--fallback">
+      <div className="globeAvatar__orb" aria-hidden="true">
+        <div className="globeAvatar__glow" />
+        <div className="globeAvatar__haze" />
+      </div>
+    </div>
+  ),
+});
+
 const Header = () => {
   return (
     <>

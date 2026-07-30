@@ -19,7 +19,7 @@ export default async function handler(
     const { message } = req.body;
 
     try {
-      const personalContext = `Jonatan is a software developer specializing in Next.js, React, TypeScript, and CSS. He has built numerous web applications, including portfolio websites, e-commerce sites, and apartment rental platforms. Jonatan is passionate about creating intuitive, user-friendly interfaces and optimizing web performance. Jonatan lives in Sweden and his CV is available at the top of the page. The two avatars showing are created using ReadyPlayerMe.`;
+      const personalContext = `Jonatan is a software developer specializing in Next.js, React, TypeScript, and CSS. He has built numerous web applications, including portfolio websites, e-commerce sites, and apartment rental platforms. Jonatan is passionate about creating intuitive, user-friendly interfaces and optimizing web performance. Jonatan lives in Sweden. His CV is not publicly available — visitors should use the contact section or LinkedIn instead. The two avatars showing are created using ReadyPlayerMe.`;
       const completePrompt = `${personalContext}\n\n${message}`;
       
       const gptResponse = await openai.completions.create({

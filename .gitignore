@@ -6,6 +6,10 @@
 #ENV
 .env.local
 
+# Private documents (not for public web or GitHub)
+Frontend/private/
+**/cv.pdf
+
 # User-specific files
 *.rsuser
 *.suo

@@ -25,7 +25,20 @@ const Footer = () => {
           <a href="https://github.com/exemplarisk" target="_blank" rel="noreferrer" title="github">
             <FaGithub />
           </a>
-          <a href="/cv.pdf">CV</a>
+          <button
+            type="button"
+            className="footer__cvClassified"
+            title="CV is classified"
+            aria-label="CV is classified and not publicly available"
+            onClick={(event) => {
+              const button = event.currentTarget;
+              button.dataset.flipped = button.dataset.flipped === "1" ? "0" : "1";
+              button.textContent =
+                button.dataset.flipped === "1" ? "Nice try" : "CV 🔒";
+            }}
+          >
+            CV 🔒
+          </button>
         </div>
 
         <div className="footer__copyright">
