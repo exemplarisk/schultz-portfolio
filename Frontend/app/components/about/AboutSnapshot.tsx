@@ -30,8 +30,8 @@ const AboutSnapshot = () => {
         <p className="aboutSnapshot__eyebrow">A few places</p>
         <h3 className="aboutSnapshot__name">Where I&apos;ve been</h3>
         <p className="aboutSnapshot__bio">
-          I write code for a living, but I&apos;ve also lived in a few corners of the world.
-          That mix is kind of the point.
+          The work is leadership and change. I&apos;ve also lived in a few corners of the
+          world, and that still shapes how I do it.
         </p>
       </div>
 

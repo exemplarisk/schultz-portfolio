@@ -1,6 +1,5 @@
 import React from "react";
-import { FaAward } from "react-icons/fa";
-import { BiCode } from "react-icons/bi";
+import { FaAward, FaUsers } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import AboutSnapshot from "./AboutSnapshot";
 
@@ -18,14 +17,14 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <BiCode className="about__icon" />
-              <h5>Role</h5>
+              <FaUsers className="about__icon" />
+              <h5>Focus</h5>
               <small>Ideas Engineer</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>5+ years</small>
+              <small>7+ years</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
@@ -34,10 +33,11 @@ const About = () => {
             </article>
           </div>
           <p>
-            I&apos;m an ideas engineer. I sit between half-formed concepts and working
-            products. Most days that means TypeScript, React, and Next.js, but the real
-            work is shaping the idea first: what it should do, who it&apos;s for, and how
-            to make something complicated feel simple once it ships.
+            I focus on development leadership and change management. The work is
+            holding a direction, building ways of working people can actually use, and
+            carrying a change through so it shows up in the organisation. Technology
+            stays in the picture where it serves that: priorities, structure, and
+            follow-through, with the people doing the work at the centre.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let&apos;s Talk

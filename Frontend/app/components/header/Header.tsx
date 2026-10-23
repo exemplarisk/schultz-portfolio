@@ -23,7 +23,7 @@ const Header = () => {
           <h5 style={{ color: "#959595" }}>Introducing</h5>
           <h1>Jonatan Schultz</h1>
           <h5 className="text-light">
-            Ideas Engineer & Miscellaneous Specialist
+            Leadership & Ideas Engineering
           </h5>
           <CTA />
           <div className="heroVisual">

@@ -5,8 +5,8 @@ import { services } from "./data/services";
 const Services = () => {
   return (
     <section id="services">
-      <h5>What I Offer</h5>
-      <h2>services & solutions</h2>
+      <h5>Where I focus</h5>
+      <h2>leadership & change</h2>
       <div className="container services__container">
         {services.map((service) => (
           <article className="service" key={service.title}>

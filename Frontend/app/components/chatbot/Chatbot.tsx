@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState, ChangeEvent, FormEvent } from "reac
 import useChatbot from "../../hooks/useChatbot";
 
 const SUGGESTIONS = [
-  "What do you build?",
+  "How do you lead change?",
+  "What does development leadership mean to you?",
   "Where have you lived?",
   "How can I contact you?",
-  "What's your stack?",
 ];
 
 const Chatbot: React.FC = () => {

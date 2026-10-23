@@ -1,7 +1,7 @@
 export const storys = [
   {
     id: 1,
-    title: "I enjoy more than just coding!",
+    title: "There is more than the work",
     text: "Beyond my passion for technology and design, I am also interested in languages, the history of humanity, our planet, and the universe! - Swipe to know more about me!",
     href: "/mep2.jpg",
   },
