@@ -129,17 +129,15 @@ img {
 }
 
 header {
-    min-height: 70vh;
     height: auto;
     padding-top: 7rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
     overflow: visible;
 }
 
 .headercontainer {
     text-align: center;
     height: auto;
-    min-height: 80vh;
     position: relative;
 }
 
@@ -980,6 +978,10 @@ nav a.active {
 
 
 /*---------------------ABOUT----------------------*/
+
+.about {
+    margin-top: 3.5rem;
+}
 
 .about__container {
     display: grid;
@@ -2005,7 +2007,6 @@ footer a {
 
     .headercontainer {
         text-align: center;
-        min-height: 70vh;
         position: relative;
     }
 
@@ -2107,7 +2108,7 @@ footer a {
     }
 
     .headercontainer {
-        min-height: 36vh;
+        height: auto;
     }
 
     .header__socials,
@@ -2128,7 +2129,7 @@ footer a {
     }
 
     .about {
-        margin-top: 10%;
+        margin-top: 2rem;
     }
 
     .about__me {
