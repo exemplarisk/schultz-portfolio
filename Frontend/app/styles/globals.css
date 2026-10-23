@@ -1380,6 +1380,7 @@ nav a.active {
 }
 
 .skillsGroup {
+    margin-top: 0;
     padding: 1.25rem 1.2rem 1.3rem;
     border-radius: 1rem;
     border: 1px solid rgba(77, 181, 255, 0.2);
